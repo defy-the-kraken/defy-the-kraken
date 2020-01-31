@@ -6,11 +6,35 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg8"
    version="1.1"
    viewBox="0 0 507.99999 285.75001"
    height="1080"
-   width="1920">
+   width="1920"
+   sodipodi:docname="ship-body.svg"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2556"
+     inkscape:window-height="1388"
+     id="namedview61"
+     showgrid="false"
+     inkscape:zoom="0.87407407"
+     inkscape:cx="920.36662"
+     inkscape:cy="437.93873"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg8" />
   <defs
      id="defs2" />
   <metadata
@@ -25,6 +49,11 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <path
+     style="fill:#ffd9ba;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+     d="m 51.534892,95.350901 c 0.454052,0 46.237622,1.967561 46.237622,1.967561 l -0.15135,29.362018 90.356326,6.58376 -0.6054,35.03767 61.59971,3.48106 82.33475,0.0757 0.22704,-32.46471 58.7997,-1.81621 20.20533,-1.43783 0.45405,31.93498 61.29701,-5.90267 -4.38918,6.28105 -23.91341,22.24855 -6.12968,7.56753 -33.37282,43.58898 -14.60535,16.79992 -69.46993,5.29728 -91.11309,4.76754 L 125.39401,261.15553 91.491461,253.8907 68.183463,206.972 67.502386,155.58846 52.594347,142.95068 Z"
+     id="path871"
+     inkscape:connector-curvature="0" />
   <g
      style="display:none"
      id="layer2">
