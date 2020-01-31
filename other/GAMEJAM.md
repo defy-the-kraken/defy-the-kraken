@@ -24,6 +24,7 @@
    - Je mehr wasser desto langsamer läuft man
    - wenn tür geöffnet fließt wasser in andern raum mit rein
 
+```
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 # Later 
@@ -41,3 +42,4 @@
     - [MAYBE] verschiedene schiffslayouts
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+```
