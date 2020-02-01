@@ -14,6 +14,8 @@ var progress : float = 0
 func _ready() -> void:
 	$HUD.set_level_progress(progress)
 	scale_ship()
+	set_physics_process(true)
+	$Ship.start()
 
 
 func _physics_process(delta : float) -> void:
@@ -22,7 +24,7 @@ func _physics_process(delta : float) -> void:
 	$HUD.set_level_progress(progress / length)
 	# Check if level has been completed
 	if progress >= length:
-		set_process(false)
+		set_physics_process(false)
 		$HUD.show_win_screen()
 
 
@@ -35,9 +37,14 @@ func scale_ship() -> void:
 	x_scale = min(x_scale, y_scale)
 	$Ship.scale = Vector2(x_scale, x_scale)
 	# Position the ship in the middle of the window
-	$Ship.position = get_viewport().size / 2 + Vector2(0, 66)
+	$Ship.position = get_viewport().size / 2 #+ Vector2(0, 66)
 
 
 
 func _on_Ship_room_update(rooms_filled, room_count):
 	$HUD.update_room_counter(rooms_filled, room_count)
+
+
+func _on_Ship_game_over():
+	set_physics_process(false)
+	$HUD.show_lose_screen()

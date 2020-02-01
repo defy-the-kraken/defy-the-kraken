@@ -11,19 +11,19 @@ font_data = ExtResource( 1 )
 size = 80
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=5]
-size = 80
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=6]
-size = 80
-font_data = ExtResource( 1 )
-
 [sub_resource type="DynamicFont" id=3]
 size = 80
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 80
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 80
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
 size = 80
 font_data = ExtResource( 1 )
 
@@ -36,21 +36,16 @@ __meta__ = {
 }
 
 [node name="Grid" type="GridContainer" parent="."]
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = 200.0
-margin_top = -250.0
-margin_right = -200.0
-margin_bottom = 250.0
+anchor_bottom = 1.0
 columns = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Res" type="OptionButton" parent="Grid"]
-margin_right = 758.0
-margin_bottom = 248.0
+margin_right = 510.0
+margin_bottom = 197.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
@@ -63,21 +58,21 @@ __meta__ = {
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="Grid"]
-margin_left = 762.0
-margin_right = 1520.0
-margin_bottom = 248.0
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 197.0
 rect_clip_content = true
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="if_16_9" type="OptionButton" parent="Grid/MarginContainer"]
 visible = false
-margin_right = 758.0
-margin_bottom = 248.0
+margin_right = 510.0
+margin_bottom = 197.0
 custom_fonts/font = SubResource( 2 )
 text = "2560x1440"
 align = 1
-items = [ "2560x1440", null, false, 0, null, "1920x1080", null, false, 1, null, "1366x768", null, false, 2, null, "1280x800", null, false, 3, null ]
+items = [ "2560x1440", null, false, 0, null, "1920x1080", null, false, 1, null, "1600x900", null, false, 2, null, "1366x768", null, false, 3, null, "1280x800", null, false, 4, null ]
 selected = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -85,9 +80,9 @@ __meta__ = {
 
 [node name="if_16_10" type="OptionButton" parent="Grid/MarginContainer"]
 visible = false
-margin_right = 758.0
-margin_bottom = 248.0
-custom_fonts/font = SubResource( 5 )
+margin_right = 510.0
+margin_bottom = 197.0
+custom_fonts/font = SubResource( 3 )
 text = "1920x1200"
 align = 1
 items = [ "1920x1200", null, false, 0, null, "1680x1050", null, false, 1, null, "1440x900", null, false, 2, null, "1280x800", null, false, 3, null ]
@@ -95,9 +90,9 @@ selected = 0
 
 [node name="if_4_3" type="OptionButton" parent="Grid/MarginContainer"]
 visible = false
-margin_right = 758.0
-margin_bottom = 248.0
-custom_fonts/font = SubResource( 6 )
+margin_right = 510.0
+margin_bottom = 197.0
+custom_fonts/font = SubResource( 4 )
 text = "1024x768"
 align = 1
 items = [ "1024x768", null, false, 0, null, "800x600", null, false, 1, null, "640x480", null, false, 2, null ]
@@ -106,27 +101,48 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cancel" type="Button" parent="Grid"]
-margin_top = 252.0
-margin_right = 758.0
-margin_bottom = 500.0
+[node name="Fullscreen" type="Button" parent="Grid"]
+margin_top = 201.0
+margin_right = 510.0
+margin_bottom = 398.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
+text = "Fullscreen"
+
+[node name="Resizeable" type="Button" parent="Grid"]
+margin_left = 514.0
+margin_top = 201.0
+margin_right = 1024.0
+margin_bottom = 398.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 5 )
+text = "Resizable"
+
+[node name="Cancel3" type="Button" parent="Grid"]
+margin_top = 402.0
+margin_right = 510.0
+margin_bottom = 599.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 5 )
 text = "Cancel"
 
 [node name="Accept" type="Button" parent="Grid"]
-margin_left = 762.0
-margin_top = 252.0
-margin_right = 1520.0
-margin_bottom = 500.0
+margin_left = 514.0
+margin_top = 402.0
+margin_right = 1024.0
+margin_bottom = 599.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Accept"
 [connection signal="item_selected" from="Grid/Res" to="." method="_on_Resolution_selected"]
 [connection signal="item_selected" from="Grid/MarginContainer/if_16_9" to="." method="_on_19_6_selected"]
 [connection signal="item_selected" from="Grid/MarginContainer/if_16_10" to="." method="_on_16_10_item_selected"]
 [connection signal="item_selected" from="Grid/MarginContainer/if_4_3" to="." method="_on_4_3_item_selected"]
-[connection signal="pressed" from="Grid/Cancel" to="." method="_on_Cancel_pressed"]
+[connection signal="pressed" from="Grid/Fullscreen" to="." method="_on_Fullscreen_pressed"]
+[connection signal="pressed" from="Grid/Resizeable" to="." method="_on_Resizeable_pressed"]
+[connection signal="pressed" from="Grid/Cancel3" to="." method="_on_Cancel_pressed"]
 [connection signal="pressed" from="Grid/Accept" to="." method="_on_Accept_pressed"]

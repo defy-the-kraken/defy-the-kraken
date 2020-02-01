@@ -5,15 +5,28 @@ A game to defy the kraken by repairing your ship and bring it to a safe harbor. 
 
 [![defy the kraken](source/assets/menu/menu.png)](https://globalgamejam.org/2020/games/defy-kraken-3)
 
+ Global Game JAM
+------------------
+Hey, this Game is created by four People during the [Global Game Jam 2020](https://globalgamejam.org/2020/games).
+Thank you [Toolbox Bodensee](https://toolbox-bodensee.de/) for the great Rooms and Equipment
+and [Haite](https://www.haite.de/) for the Sponsored food.
+
+The Global Game Jam is a 48Hour Game Jam where the World
+Create Games for the World. 
+
+
  Gameidea
 ------------
 We made some thoughts about the game idea in [GAMEJAM.md](other/GAMEJAM.md).
 
-
+ ENGINE
+-----------
+This game is under Developing right now (During the Global Game Jam 2020)
+with the GODOT Game Engine [Donwload - Godot](https://godotengine.org/download/linux)
 
  LICENSE
 -----------
-defy-the-kraken game (c) by Jan, Tim and L3D
+defy-the-kraken game (c) by Frogbeerr, Zitroanen, L3D and Yani
 
 defy-the-kraken game is licensed under a
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.

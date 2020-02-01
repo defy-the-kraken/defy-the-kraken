@@ -6,8 +6,11 @@
 
 [node name="Level" type="Node"]
 script = ExtResource( 2 )
+length = 300.0
+speed = 5.0
 
 [node name="Ship" parent="." instance=ExtResource( 3 )]
 
 [node name="HUD" parent="." instance=ExtResource( 1 )]
+[connection signal="game_over" from="Ship" to="." method="_on_Ship_game_over"]
 [connection signal="room_update" from="Ship" to="." method="_on_Ship_room_update"]
