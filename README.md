@@ -3,7 +3,7 @@
 
 A game to defy the kraken by repairing your ship and bring it to a safe harbor. Created during global game jam 2020.
 
-[[defy the kraken](source/assets/menu/menu.png)](https://globalgamejam.org/2020/games/defy-kraken-3)
+[![defy the kraken](source/assets/menu/menu.png)](https://globalgamejam.org/2020/games/defy-kraken-3)
 
  Gameidea
 ------------
