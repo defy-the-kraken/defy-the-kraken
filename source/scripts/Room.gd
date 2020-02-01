@@ -10,6 +10,7 @@ var is_full : bool = false
 
 
 func _ready():
+	$Water.show()
 	room_size = $Shape.shape.extents
 	# Position the water
 	# 256 is the size of the water texture
@@ -43,5 +44,4 @@ func _process(delta) -> void:
 		emit_signal("room_filled", self, false)
 
 func flood(amount : float) -> void:
-	print_debug($Water.value)
 	$Water.value += amount

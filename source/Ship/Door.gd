@@ -10,6 +10,8 @@ func toggle() -> void:
 
 func open() -> void:
 	frame = OPEN
+	$Body/Shape.disabled = false
 
 func close() -> void:
 	frame = CLOSED
+	$Body/Shape.disabled = true
