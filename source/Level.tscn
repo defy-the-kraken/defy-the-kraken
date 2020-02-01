@@ -6,6 +6,8 @@
 
 [node name="Level" type="Node"]
 script = ExtResource( 2 )
+length = 300.0
+speed = 5.0
 
 [node name="Ship" parent="." instance=ExtResource( 3 )]
 

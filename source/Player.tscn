@@ -1,0 +1,57 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/character/body1-klettern_2.svg" type="Texture" id=1]
+[ext_resource path="res://assets/character/body1-walk_6.svg" type="Texture" id=2]
+[ext_resource path="res://assets/character/body1-walk_4.svg" type="Texture" id=3]
+[ext_resource path="res://assets/character/body1-klettern_4.svg" type="Texture" id=4]
+[ext_resource path="res://assets/character/body1-walk_0.svg" type="Texture" id=5]
+[ext_resource path="res://assets/character/body1-draft.svg" type="Texture" id=6]
+[ext_resource path="res://assets/character/body1-walk_3.svg" type="Texture" id=7]
+[ext_resource path="res://assets/character/body1-klettern_1.svg" type="Texture" id=8]
+[ext_resource path="res://assets/character/body1-walk_1.svg" type="Texture" id=9]
+[ext_resource path="res://assets/character/body1-klettern_5.svg" type="Texture" id=10]
+[ext_resource path="res://assets/character/body1-walk_7.svg" type="Texture" id=11]
+[ext_resource path="res://assets/character/body1-walk_2.svg" type="Texture" id=12]
+[ext_resource path="res://assets/character/body1-klettern_3.svg" type="Texture" id=13]
+[ext_resource path="res://assets/character/body1-walk_5.svg" type="Texture" id=14]
+[ext_resource path="res://assets/character/body1-klettern_0.svg" type="Texture" id=15]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "climb",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk",
+"speed": 15.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 68, 80 )
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 181, 147 )
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+playing = true
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 2 )

@@ -11,7 +11,7 @@ var rooms_filled : Array = []
 var rooms_not_breached : Array = []
 var rng : RandomNumberGenerator
 
-func _ready():
+func _ready() -> void:
 	rng = RandomNumberGenerator.new()
 	rng.randomize()
 	for room in $Rooms.get_children():
@@ -19,9 +19,13 @@ func _ready():
 		rooms_not_breached.append(room)
 
 
-func set_breach_timer():
+func set_breach_timer() -> void:
 	var time : float = rng.randf_range(min_breach_time, max_breach_time)
 	$BreachTimer.start(time)
+
+
+func start() -> void:
+	set_breach_timer()
 
 
 func on_room_filled(room, is_filled) -> void:

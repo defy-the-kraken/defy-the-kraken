@@ -74,11 +74,12 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
+min_breach_time = 3.0
+max_breach_time = 20.0
 
 [node name="BreachTimer" type="Timer" parent="."]
 process_mode = 0
 one_shot = true
-autostart = true
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -286,6 +287,8 @@ position = Vector2( -940, -187 )
 shape = SubResource( 11 )
 
 [node name="doors" type="Node2D" parent="."]
+
+[node name="players" type="Node2D" parent="."]
 [connection signal="timeout" from="BreachTimer" to="." method="_on_BreachTimer_timeout"]
 
 [editable path="Rooms/Room"]

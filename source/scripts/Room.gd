@@ -31,7 +31,7 @@ func repair() -> void:
 	is_breached = false
 	$Breach.hide()
 
-func _process(delta) -> void:
+func _physics_process(delta) -> void:
 	if is_breached:
 		flood(delta * flood_speed)
 	
@@ -41,7 +41,11 @@ func _process(delta) -> void:
 		emit_signal("room_filled", self, true)
 	# Check if the room is no longer full
 	elif is_full and $Water.value < $Water.max_value:
+		is_full = false
 		emit_signal("room_filled", self, false)
 
 func flood(amount : float) -> void:
 	$Water.value += amount
+
+func drain(amount : float) -> void:
+	$Water.value -= amount

@@ -15,6 +15,7 @@ func _ready() -> void:
 	$HUD.set_level_progress(progress)
 	scale_ship()
 	set_physics_process(true)
+	$Ship.start()
 
 
 func _physics_process(delta : float) -> void:
@@ -36,7 +37,7 @@ func scale_ship() -> void:
 	x_scale = min(x_scale, y_scale)
 	$Ship.scale = Vector2(x_scale, x_scale)
 	# Position the ship in the middle of the window
-	$Ship.position = get_viewport().size / 2 + Vector2(0, 66)
+	$Ship.position = get_viewport().size / 2 #+ Vector2(0, 66)
 
 
 
