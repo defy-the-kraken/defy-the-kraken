@@ -23,6 +23,11 @@ config/icon="res://icon.png"
 window/size/width=1920
 window/size/height=1080
 
+[layer_names]
+
+2d_render/layer_1="general"
+2d_render/layer_2="water"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

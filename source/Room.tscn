@@ -1,19 +1,5 @@
-[gd_scene load_steps=2 format=2]
-
-[sub_resource type="CircleShape2D" id=1]
-radius = 20.0
+[gd_scene format=2]
 
 [node name="Room" type="StaticBody2D"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-build_mode = 1
-polygon = PoolVector2Array( 42.0016, 304.855, 522.764, 309.615, 640.178, 66.8543, 389.483, -28.3462, 15.0282, 144.601 )
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2( 555.336, 87.2671 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 1 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
