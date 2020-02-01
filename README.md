@@ -21,4 +21,6 @@ work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
 
 ### FONTS - USED
 how-to-do-something - licensed as Freeware, Non-Commercial.
+Copyright © 2012 TattooWoo.com. All Rights Reserved.
+
 from <https://www.fontspace.com/jonathan-s-harris/how-to-do-something>
