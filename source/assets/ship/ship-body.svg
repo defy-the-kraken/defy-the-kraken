@@ -31,13 +31,13 @@
      inkscape:window-height="1388"
      id="namedview61"
      showgrid="false"
-     inkscape:zoom="2"
-     inkscape:cx="875.01198"
-     inkscape:cy="491.07787"
+     inkscape:zoom="4"
+     inkscape:cx="1123.1957"
+     inkscape:cy="346.29815"
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer7" />
+     inkscape:current-layer="layer8" />
   <defs
      id="defs2" />
   <metadata
@@ -670,5 +670,25 @@
        height="1.8007286"
        x="276.40012"
        y="196.25374" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="loch">
+    <path
+       style="fill:#000000;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 304.97791,186.59301 -2.87637,-0.006 -2.57255,-1.1274 -1.4965,1.11867 -3.95247,-0.008 1.68378,1.21608 -2.71277,1.35639 2.43215,1.0056 -1.5435,1.0056 7.69403,0.0935 -0.88865,-1.02899 5.30862,-0.23386 -3.0168,-1.02899 2.80633,-1.1693 -2.3386,-0.35079 z"
+       id="path898"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccc"
+       inkscape:export-xdpi="223"
+       inkscape:export-ydpi="223" />
+    <path
+       style="fill:#000000;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 288.99115,213.05573 h 17.39636 l -2.91042,1.45521 3.04271,0.66146 -4.49792,1.38906 4.23334,0.52917 -3.57188,0.8599 2.18281,0.66145 -16.20573,-0.13229 -2.18281,-1.71979 4.63021,-0.7276 -2.84427,-0.52917 1.5875,-0.39687 -3.24115,-0.72761 z"
+       id="path900"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="223"
+       inkscape:export-ydpi="223" />
   </g>
 </svg>
