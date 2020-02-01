@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://assets/menu/menu_nur_schiff.png" type="Texture" id=1]
 [ext_resource path="res://assets/menu/menu_ohne_schiff.png" type="Texture" id=2]
 [ext_resource path="res://Menues/Ship.gd" type="Script" id=3]
 [ext_resource path="res://assets/menu/kraken_text.png" type="Texture" id=4]
@@ -24,7 +25,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="MenuBackground"]
+texture = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -46,57 +48,57 @@ __meta__ = {
 }
 
 [node name="Control21" type="Control" parent="Buttons"]
-margin_right = 270.0
-margin_bottom = 150.0
+margin_right = 142.0
+margin_bottom = 82.0
 
 [node name="Control22" type="Control" parent="Buttons"]
-margin_left = 274.0
-margin_right = 544.0
-margin_bottom = 150.0
+margin_left = 146.0
+margin_right = 288.0
+margin_bottom = 82.0
 
 [node name="Control23" type="Control" parent="Buttons"]
-margin_left = 548.0
-margin_right = 818.0
-margin_bottom = 150.0
+margin_left = 292.0
+margin_right = 434.0
+margin_bottom = 82.0
 
 [node name="Control24" type="Control" parent="Buttons"]
-margin_left = 822.0
-margin_right = 1092.0
-margin_bottom = 150.0
+margin_left = 438.0
+margin_right = 580.0
+margin_bottom = 82.0
 
 [node name="Control25" type="Control" parent="Buttons"]
-margin_left = 1096.0
-margin_right = 1366.0
-margin_bottom = 150.0
+margin_left = 584.0
+margin_right = 726.0
+margin_bottom = 82.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control31" type="Control" parent="Buttons"]
-margin_left = 1370.0
-margin_right = 1640.0
-margin_bottom = 150.0
+margin_left = 730.0
+margin_right = 872.0
+margin_bottom = 82.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control32" type="Control" parent="Buttons"]
-margin_left = 1644.0
-margin_right = 1914.0
-margin_bottom = 150.0
+margin_left = 876.0
+margin_right = 1018.0
+margin_bottom = 82.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control33" type="Control" parent="Buttons"]
-margin_top = 154.0
-margin_right = 270.0
-margin_bottom = 304.0
+margin_top = 86.0
+margin_right = 142.0
+margin_bottom = 168.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Play - Solo" type="Button" parent="Buttons"]
-margin_left = 274.0
-margin_top = 154.0
-margin_right = 544.0
-margin_bottom = 304.0
+margin_left = 146.0
+margin_top = 86.0
+margin_right = 288.0
+margin_bottom = 168.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Play Solo"
@@ -105,51 +107,51 @@ __meta__ = {
 }
 
 [node name="Control" type="Control" parent="Buttons"]
-margin_left = 548.0
-margin_top = 154.0
-margin_right = 818.0
-margin_bottom = 304.0
+margin_left = 292.0
+margin_top = 86.0
+margin_right = 434.0
+margin_bottom = 168.0
 
 [node name="Control2" type="Control" parent="Buttons"]
-margin_left = 822.0
-margin_top = 154.0
-margin_right = 1092.0
-margin_bottom = 304.0
+margin_left = 438.0
+margin_top = 86.0
+margin_right = 580.0
+margin_bottom = 168.0
 
 [node name="Control3" type="Control" parent="Buttons"]
-margin_left = 1096.0
-margin_top = 154.0
-margin_right = 1366.0
-margin_bottom = 304.0
+margin_left = 584.0
+margin_top = 86.0
+margin_right = 726.0
+margin_bottom = 168.0
 
 [node name="Control4" type="Control" parent="Buttons"]
-margin_left = 1370.0
-margin_top = 154.0
-margin_right = 1640.0
-margin_bottom = 304.0
+margin_left = 730.0
+margin_top = 86.0
+margin_right = 872.0
+margin_bottom = 168.0
 
 [node name="Control8" type="Control" parent="Buttons"]
-margin_left = 1644.0
-margin_top = 154.0
-margin_right = 1914.0
-margin_bottom = 304.0
+margin_left = 876.0
+margin_top = 86.0
+margin_right = 1018.0
+margin_bottom = 168.0
 
 [node name="Control34" type="Control" parent="Buttons"]
-margin_top = 308.0
-margin_right = 270.0
-margin_bottom = 458.0
+margin_top = 172.0
+margin_right = 142.0
+margin_bottom = 254.0
 
 [node name="Control35" type="Control" parent="Buttons"]
-margin_left = 274.0
-margin_top = 308.0
-margin_right = 544.0
-margin_bottom = 458.0
+margin_left = 146.0
+margin_top = 172.0
+margin_right = 288.0
+margin_bottom = 254.0
 
 [node name="Local co op" type="Button" parent="Buttons"]
-margin_left = 548.0
-margin_top = 308.0
-margin_right = 818.0
-margin_bottom = 458.0
+margin_left = 292.0
+margin_top = 172.0
+margin_right = 434.0
+margin_bottom = 254.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Play Solo"
@@ -158,51 +160,51 @@ __meta__ = {
 }
 
 [node name="Control5" type="Control" parent="Buttons"]
-margin_left = 822.0
-margin_top = 308.0
-margin_right = 1092.0
-margin_bottom = 458.0
+margin_left = 438.0
+margin_top = 172.0
+margin_right = 580.0
+margin_bottom = 254.0
 
 [node name="Control6" type="Control" parent="Buttons"]
-margin_left = 1096.0
-margin_top = 308.0
-margin_right = 1366.0
-margin_bottom = 458.0
+margin_left = 584.0
+margin_top = 172.0
+margin_right = 726.0
+margin_bottom = 254.0
 
 [node name="Control36" type="Control" parent="Buttons"]
-margin_left = 1370.0
-margin_top = 308.0
-margin_right = 1640.0
-margin_bottom = 458.0
+margin_left = 730.0
+margin_top = 172.0
+margin_right = 872.0
+margin_bottom = 254.0
 
 [node name="Control37" type="Control" parent="Buttons"]
-margin_left = 1644.0
-margin_top = 308.0
-margin_right = 1914.0
-margin_bottom = 458.0
+margin_left = 876.0
+margin_top = 172.0
+margin_right = 1018.0
+margin_bottom = 254.0
 
 [node name="Control7" type="Control" parent="Buttons"]
-margin_top = 462.0
-margin_right = 270.0
-margin_bottom = 612.0
+margin_top = 258.0
+margin_right = 142.0
+margin_bottom = 340.0
 
 [node name="Control9" type="Control" parent="Buttons"]
-margin_left = 274.0
-margin_top = 462.0
-margin_right = 544.0
-margin_bottom = 612.0
+margin_left = 146.0
+margin_top = 258.0
+margin_right = 288.0
+margin_bottom = 340.0
 
 [node name="Control10" type="Control" parent="Buttons"]
-margin_left = 548.0
-margin_top = 462.0
-margin_right = 818.0
-margin_bottom = 612.0
+margin_left = 292.0
+margin_top = 258.0
+margin_right = 434.0
+margin_bottom = 340.0
 
 [node name="Preferences" type="Button" parent="Buttons"]
-margin_left = 822.0
-margin_top = 462.0
-margin_right = 1092.0
-margin_bottom = 612.0
+margin_left = 438.0
+margin_top = 258.0
+margin_right = 580.0
+margin_bottom = 340.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Play Solo"
@@ -211,51 +213,51 @@ __meta__ = {
 }
 
 [node name="Control11" type="Control" parent="Buttons"]
-margin_left = 1096.0
-margin_top = 462.0
-margin_right = 1366.0
-margin_bottom = 612.0
+margin_left = 584.0
+margin_top = 258.0
+margin_right = 726.0
+margin_bottom = 340.0
 
 [node name="Control38" type="Control" parent="Buttons"]
-margin_left = 1370.0
-margin_top = 462.0
-margin_right = 1640.0
-margin_bottom = 612.0
+margin_left = 730.0
+margin_top = 258.0
+margin_right = 872.0
+margin_bottom = 340.0
 
 [node name="Control39" type="Control" parent="Buttons"]
-margin_left = 1644.0
-margin_top = 462.0
-margin_right = 1914.0
-margin_bottom = 612.0
+margin_left = 876.0
+margin_top = 258.0
+margin_right = 1018.0
+margin_bottom = 340.0
 
 [node name="Control12" type="Control" parent="Buttons"]
-margin_top = 616.0
-margin_right = 270.0
-margin_bottom = 766.0
+margin_top = 344.0
+margin_right = 142.0
+margin_bottom = 426.0
 
 [node name="Control13" type="Control" parent="Buttons"]
-margin_left = 274.0
-margin_top = 616.0
-margin_right = 544.0
-margin_bottom = 766.0
+margin_left = 146.0
+margin_top = 344.0
+margin_right = 288.0
+margin_bottom = 426.0
 
 [node name="Control14" type="Control" parent="Buttons"]
-margin_left = 548.0
-margin_top = 616.0
-margin_right = 818.0
-margin_bottom = 766.0
+margin_left = 292.0
+margin_top = 344.0
+margin_right = 434.0
+margin_bottom = 426.0
 
 [node name="Control15" type="Control" parent="Buttons"]
-margin_left = 822.0
-margin_top = 616.0
-margin_right = 1092.0
-margin_bottom = 766.0
+margin_left = 438.0
+margin_top = 344.0
+margin_right = 580.0
+margin_bottom = 426.0
 
 [node name="credits" type="Button" parent="Buttons"]
-margin_left = 1096.0
-margin_top = 616.0
-margin_right = 1366.0
-margin_bottom = 766.0
+margin_left = 584.0
+margin_top = 344.0
+margin_right = 726.0
+margin_bottom = 426.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Play Solo"
@@ -264,51 +266,51 @@ __meta__ = {
 }
 
 [node name="Control16" type="Control" parent="Buttons"]
-margin_left = 1370.0
-margin_top = 616.0
-margin_right = 1640.0
-margin_bottom = 766.0
+margin_left = 730.0
+margin_top = 344.0
+margin_right = 872.0
+margin_bottom = 426.0
 
 [node name="Control17" type="Control" parent="Buttons"]
-margin_left = 1644.0
-margin_top = 616.0
-margin_right = 1914.0
-margin_bottom = 766.0
+margin_left = 876.0
+margin_top = 344.0
+margin_right = 1018.0
+margin_bottom = 426.0
 
 [node name="Control40" type="Control" parent="Buttons"]
-margin_top = 770.0
-margin_right = 270.0
-margin_bottom = 920.0
+margin_top = 430.0
+margin_right = 142.0
+margin_bottom = 512.0
 
 [node name="Control41" type="Control" parent="Buttons"]
-margin_left = 274.0
-margin_top = 770.0
-margin_right = 544.0
-margin_bottom = 920.0
+margin_left = 146.0
+margin_top = 430.0
+margin_right = 288.0
+margin_bottom = 512.0
 
 [node name="Control18" type="Control" parent="Buttons"]
-margin_left = 548.0
-margin_top = 770.0
-margin_right = 818.0
-margin_bottom = 920.0
+margin_left = 292.0
+margin_top = 430.0
+margin_right = 434.0
+margin_bottom = 512.0
 
 [node name="Control19" type="Control" parent="Buttons"]
-margin_left = 822.0
-margin_top = 770.0
-margin_right = 1092.0
-margin_bottom = 920.0
+margin_left = 438.0
+margin_top = 430.0
+margin_right = 580.0
+margin_bottom = 512.0
 
 [node name="Control20" type="Control" parent="Buttons"]
-margin_left = 1096.0
-margin_top = 770.0
-margin_right = 1366.0
-margin_bottom = 920.0
+margin_left = 584.0
+margin_top = 430.0
+margin_right = 726.0
+margin_bottom = 512.0
 
 [node name="Quit" type="Button" parent="Buttons"]
-margin_left = 1370.0
-margin_top = 770.0
-margin_right = 1640.0
-margin_bottom = 920.0
+margin_left = 730.0
+margin_top = 430.0
+margin_right = 872.0
+margin_bottom = 512.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Play Solo"
@@ -317,41 +319,41 @@ __meta__ = {
 }
 
 [node name="Control26" type="Control" parent="Buttons"]
-margin_left = 1644.0
-margin_top = 770.0
-margin_right = 1914.0
-margin_bottom = 920.0
+margin_left = 876.0
+margin_top = 430.0
+margin_right = 1018.0
+margin_bottom = 512.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control27" type="Control" parent="Buttons"]
-margin_top = 924.0
-margin_right = 270.0
-margin_bottom = 1074.0
+margin_top = 516.0
+margin_right = 142.0
+margin_bottom = 598.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control28" type="Control" parent="Buttons"]
-margin_left = 274.0
-margin_top = 924.0
-margin_right = 544.0
-margin_bottom = 1074.0
+margin_left = 146.0
+margin_top = 516.0
+margin_right = 288.0
+margin_bottom = 598.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control29" type="Control" parent="Buttons"]
-margin_left = 548.0
-margin_top = 924.0
-margin_right = 818.0
-margin_bottom = 1074.0
+margin_left = 292.0
+margin_top = 516.0
+margin_right = 434.0
+margin_bottom = 598.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control30" type="Control" parent="Buttons"]
-margin_left = 822.0
-margin_top = 924.0
-margin_right = 1092.0
-margin_bottom = 1074.0
+margin_left = 438.0
+margin_top = 516.0
+margin_right = 580.0
+margin_bottom = 598.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -364,4 +366,4 @@ autostart = true
 [connection signal="button_down" from="Buttons/Preferences" to="." method="_on_Preferences_button_down"]
 [connection signal="button_down" from="Buttons/credits" to="." method="_on_credits_button_down"]
 [connection signal="button_down" from="Buttons/Quit" to="." method="_on_Quit_button_down"]
-[connection signal="timeout" from="Timer" to="Sprite" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="MenuBackground/Sprite" method="_on_Timer_timeout"]

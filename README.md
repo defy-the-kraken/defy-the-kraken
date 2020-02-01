@@ -13,7 +13,7 @@ We made some thoughts about the game idea in [GAMEJAM.md](other/GAMEJAM.md).
 
  LICENSE
 -----------
-defy-the-kraken game (c) by Jan, Tim and L3D
+defy-the-kraken game (c) by Frogbeerr, Zitroanen, L3D and Yani
 
 defy-the-kraken game is licensed under a
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.

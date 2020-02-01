@@ -38,9 +38,17 @@ extents = Vector2( 188, 65 )
 resource_local_to_scene = true
 extents = Vector2( 10, 112 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=10]
 resource_local_to_scene = true
 extents = Vector2( 10, 70 )
+
+[sub_resource type="RectangleShape2D" id=11]
+resource_local_to_scene = true
+extents = Vector2( 7, 322 )
+
+[sub_resource type="RectangleShape2D" id=12]
+resource_local_to_scene = true
+extents = Vector2( 7, 322 )
 
 [sub_resource type="RectangleShape2D" id=13]
 resource_local_to_scene = true
@@ -51,21 +59,13 @@ resource_local_to_scene = true
 extents = Vector2( 7, 322 )
 
 [sub_resource type="RectangleShape2D" id=15]
-resource_local_to_scene = true
-extents = Vector2( 7, 322 )
+extents = Vector2( 7, 73 )
 
 [sub_resource type="RectangleShape2D" id=16]
 resource_local_to_scene = true
 extents = Vector2( 7, 322 )
 
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 7, 73 )
-
 [sub_resource type="RectangleShape2D" id=17]
-resource_local_to_scene = true
-extents = Vector2( 7, 322 )
-
-[sub_resource type="RectangleShape2D" id=11]
 resource_local_to_scene = true
 extents = Vector2( 725, 7 )
 
@@ -87,6 +87,7 @@ __meta__ = {
 }
 
 [node name="Rooms" type="Node2D" parent="."]
+visible = false
 
 [node name="Room" parent="Rooms" instance=ExtResource( 3 )]
 position = Vector2( -533, -116 )
@@ -203,55 +204,55 @@ position = Vector2( -555, -297 )
 
 [node name="CollisionShape2D" parent="walls/Wall2" index="0"]
 position = Vector2( -3, 36 )
-shape = SubResource( 12 )
+shape = SubResource( 10 )
 
 [node name="Wall3" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( -670, 140 )
 
 [node name="CollisionShape2D" parent="walls/Wall3" index="0"]
-shape = SubResource( 13 )
+shape = SubResource( 11 )
 
 [node name="Wall5" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( 647, 103 )
 
 [node name="CollisionShape2D" parent="walls/Wall5" index="0"]
-shape = SubResource( 14 )
+shape = SubResource( 12 )
 
 [node name="Wall6" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( 376, 271 )
 
 [node name="CollisionShape2D" parent="walls/Wall6" index="0"]
-shape = SubResource( 15 )
+shape = SubResource( 13 )
 
 [node name="Wall7" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( -10, 269 )
 
 [node name="CollisionShape2D" parent="walls/Wall7" index="0"]
-shape = SubResource( 16 )
+shape = SubResource( 14 )
 
 [node name="Wall8" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( -224, -119 )
 
 [node name="CollisionShape2D" parent="walls/Wall8" index="0"]
-shape = SubResource( 10 )
+shape = SubResource( 15 )
 
 [node name="Wall9" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( 300, -112 )
 
 [node name="CollisionShape2D" parent="walls/Wall9" index="0"]
-shape = SubResource( 10 )
+shape = SubResource( 15 )
 
 [node name="Wall10" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( 476, -110 )
 
 [node name="CollisionShape2D" parent="walls/Wall10" index="0"]
-shape = SubResource( 10 )
+shape = SubResource( 15 )
 
 [node name="Wall4" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( -395, 132 )
 
 [node name="CollisionShape2D" parent="walls/Wall4" index="0"]
-shape = SubResource( 17 )
+shape = SubResource( 16 )
 
 [node name="floors" type="Node2D" parent="."]
 
@@ -259,33 +260,34 @@ shape = SubResource( 17 )
 position = Vector2( -17, 387 )
 
 [node name="CollisionShape2D" parent="floors/Floor" index="0"]
-shape = SubResource( 11 )
+shape = SubResource( 17 )
 
 [node name="Floor2" parent="floors" instance=ExtResource( 5 )]
 position = Vector2( -34, 243 )
 
 [node name="CollisionShape2D" parent="floors/Floor2" index="0"]
-shape = SubResource( 11 )
+shape = SubResource( 17 )
 
 [node name="Floor3" parent="floors" instance=ExtResource( 5 )]
 position = Vector2( -9, 100 )
 
 [node name="CollisionShape2D" parent="floors/Floor3" index="0"]
-shape = SubResource( 11 )
+shape = SubResource( 17 )
 
 [node name="Floor4" parent="floors" instance=ExtResource( 5 )]
 position = Vector2( -6, -46 )
 
 [node name="CollisionShape2D" parent="floors/Floor4" index="0"]
-shape = SubResource( 11 )
+shape = SubResource( 17 )
 
 [node name="Floor5" parent="floors" instance=ExtResource( 5 )]
 position = Vector2( -940, -187 )
 
 [node name="CollisionShape2D" parent="floors/Floor5" index="0"]
-shape = SubResource( 11 )
+shape = SubResource( 17 )
 
 [node name="doors" type="Node2D" parent="."]
+visible = false
 [connection signal="timeout" from="BreachTimer" to="." method="_on_BreachTimer_timeout"]
 
 [editable path="Rooms/Room"]

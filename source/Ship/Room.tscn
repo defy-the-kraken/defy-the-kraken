@@ -5,14 +5,14 @@
 [ext_resource path="res://assets/textures/Texture_Seawater_tilable_256x256.png" type="Texture" id=3]
 [ext_resource path="res://assets/ship/loch1.png" type="Texture" id=4]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 resource_local_to_scene = true
 extents = Vector2( 120.492, 95.8923 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 57, 26 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 24, 45 )
 
 [node name="Room" type="Area2D"]
@@ -22,7 +22,7 @@ collision_mask = 8
 script = ExtResource( 1 )
 
 [node name="Shape" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Breach" type="Sprite" parent="."]
 visible = false
@@ -32,7 +32,7 @@ texture = ExtResource( 4 )
 [node name="InteractionArea" type="Area2D" parent="Breach"]
 
 [node name="Shape" type="CollisionShape2D" parent="Breach/InteractionArea"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Water" type="TextureProgress" parent="."]
 visible = false
@@ -55,4 +55,4 @@ offset = Vector2( 0, -45 )
 position = Vector2( 0, -45 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pump/Area2D"]
-shape = SubResource( 2 )
+shape = SubResource( 3 )
