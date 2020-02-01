@@ -10,8 +10,10 @@ func set_level_progress(progress : float) -> void:
 
 
 func show_win_screen() -> void:
-	$WinScreen.visible = true
+	$WinScreen.show()
 
+func show_lose_screen() -> void:
+	$LoseScreen.show()
 
 func _on_BtnReplay_button_up():
 	get_tree().reload_current_scene()

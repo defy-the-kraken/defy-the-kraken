@@ -23,7 +23,7 @@ config/icon="res://icon.png"
 2d_render/layer_1="general"
 2d_physics/layer_1="walls"
 2d_render/layer_2="water"
-2d_physics/layer_2="doors"
+2d_physics/layer_2="floors"
 2d_physics/layer_3="rooms"
 2d_physics/layer_4="players"
 
