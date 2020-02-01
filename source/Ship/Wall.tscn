@@ -2,7 +2,7 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 resource_local_to_scene = true
-extents = Vector2( 10, 112 )
+extents = Vector2( 7, 322 )
 
 [node name="Wall" type="StaticBody2D"]
 collision_mask = 8
