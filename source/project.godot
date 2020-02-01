@@ -15,13 +15,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Source"
+config/name="Defy the Kraken"
 config/icon="res://icon.png"
 
-[display]
+[layer_names]
 
-window/size/width=1920
-window/size/height=1080
+2d_render/layer_1="general"
+2d_render/layer_2="water"
 
 [rendering]
 
