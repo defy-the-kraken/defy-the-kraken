@@ -18,16 +18,14 @@ _global_script_class_icons={
 config/name="Defy the Kraken"
 config/icon="res://icon.png"
 
-[display]
-
-window/size/width=1920
-window/size/height=1080
-window/size/resizable=false
-
 [layer_names]
 
 2d_render/layer_1="general"
+2d_physics/layer_1="walls"
 2d_render/layer_2="water"
+2d_physics/layer_2="doors"
+2d_physics/layer_3="rooms"
+2d_physics/layer_4="players"
 
 [rendering]
 

@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/ship/ship-body_without_space.svg.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Ship.gd" type="Script" id=2]
+[ext_resource path="res://Ship/Room.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 192.892, 63.1603 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 160.14, 67.3988 )
+
+[node name="Ship" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Rooms" type="Node2D" parent="."]
+
+[node name="Room" parent="Rooms" instance=ExtResource( 3 )]
+position = Vector2( -258.678, 126.194 )
+
+[node name="Shape" parent="Rooms/Room" index="0"]
+shape = SubResource( 1 )
+
+[node name="Room2" parent="Rooms" instance=ExtResource( 3 )]
+position = Vector2( 103.428, 129.001 )
+
+[node name="Shape" parent="Rooms/Room2" index="0"]
+shape = SubResource( 2 )
+
+[node name="BreachTimer" type="Timer" parent="."]
+process_mode = 0
+one_shot = true
+autostart = true
+[connection signal="timeout" from="BreachTimer" to="." method="_on_BreachTimer_timeout"]
+
+[editable path="Rooms/Room"]
+
+[editable path="Rooms/Room2"]

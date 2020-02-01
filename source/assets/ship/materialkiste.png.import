@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/door_closed.png-4df3f8571ccbdcf74b65516748f05b53.stex"
+path="res://.import/materialkiste.png-239a5c23c2e39cd6f6fb4631c232cfe8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ship/door_closed.png"
-dest_files=[ "res://.import/door_closed.png-4df3f8571ccbdcf74b65516748f05b53.stex" ]
+source_file="res://assets/ship/materialkiste.png"
+dest_files=[ "res://.import/materialkiste.png-239a5c23c2e39cd6f6fb4631c232cfe8.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

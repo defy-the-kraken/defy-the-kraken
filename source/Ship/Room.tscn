@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/Room.gd" type="Script" id=1]
+[ext_resource path="res://assets/ship/pumpe.png" type="Texture" id=2]
+[ext_resource path="res://assets/textures/Texture_Seawater_tilable_256x256.png" type="Texture" id=3]
+[ext_resource path="res://assets/ship/loch1.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 57, 26 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24, 45 )
+
+[node name="Room" type="Area2D"]
+self_modulate = Color( 1, 1, 1, 0 )
+collision_layer = 4
+collision_mask = 8
+script = ExtResource( 1 )
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+
+[node name="Breach" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 4 )
+
+[node name="InteractionArea" type="Area2D" parent="Breach"]
+
+[node name="Shape" type="CollisionShape2D" parent="Breach/InteractionArea"]
+shape = SubResource( 1 )
+
+[node name="Water" type="TextureProgress" parent="."]
+self_modulate = Color( 1, 1, 1, 0.588235 )
+margin_right = 256.0
+margin_bottom = 256.0
+rect_clip_content = true
+step = 0.0
+value = 50.0
+texture_progress = ExtResource( 3 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pump" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+offset = Vector2( 0, -45 )
+
+[node name="Area2D" type="Area2D" parent="Pump"]
+position = Vector2( 0, -45 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pump/Area2D"]
+shape = SubResource( 2 )
