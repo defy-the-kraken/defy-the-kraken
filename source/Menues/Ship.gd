@@ -18,5 +18,3 @@ func _on_Timer_timeout():
 		get_parent().get_node("Timer").start(7)
 	else:
 		get_parent().get_node("Timer").start(13)
-	get_parent().anchor_right
-	

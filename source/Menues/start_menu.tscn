@@ -362,6 +362,7 @@ wait_time = 0.1
 autostart = true
 [connection signal="button_down" from="Buttons/Play - Solo" to="." method="_on_Play__Solo_button_down"]
 [connection signal="button_down" from="Buttons/Local co op" to="." method="_on_Local_co_op_button_down"]
+[connection signal="pressed" from="Buttons/Local co op" to="." method="_on_Local_co_op_pressed"]
 [connection signal="button_down" from="Buttons/Preferences" to="." method="_on_Preferences_button_down"]
 [connection signal="button_down" from="Buttons/credits" to="." method="_on_credits_button_down"]
 [connection signal="button_down" from="Buttons/Quit" to="." method="_on_Quit_button_down"]
