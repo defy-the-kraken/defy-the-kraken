@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4.0000002"
-     inkscape:cx="186.90178"
+     inkscape:cx="183.02678"
      inkscape:cy="40.182796"
      inkscape:document-units="mm"
      inkscape:current-layer="layer3"
@@ -68,7 +68,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -199,10 +199,10 @@
        height="1.9872395"
        width="4.4009976"
        id="rect4546"
-       style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.02832532px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       style="display:inline;opacity:1;vector-effect:none;fill:#767151;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.02832532px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill;font-variant-east_asian:normal"
        transform="rotate(-12.732099)" />
     <rect
-       style="display:inline;opacity:1;vector-effect:none;fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.02832532px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       style="display:inline;opacity:1;vector-effect:none;fill:#767151;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.02832532px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill;font-variant-east_asian:normal"
        id="rect4548"
        width="4.4009976"
        height="1.9872396"
