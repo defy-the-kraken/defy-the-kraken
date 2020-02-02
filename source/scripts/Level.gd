@@ -5,7 +5,8 @@ export (float) var length = 1000
 # How many steps per second shall the ship take
 export (float) var speed = 1
 
-
+var win : PackedScene = load("res://Menues/UI/WinScreen.tscn")
+var loose : PackedScene = load("res://Menues/UI/LoseScreen.tscn")
 
 # How many steps did the ship take so far
 var progress : float = 0
@@ -25,7 +26,7 @@ func _physics_process(delta : float) -> void:
 	# Check if level has been completed
 	if progress >= length:
 		set_physics_process(false)
-		$HUD.show_win_screen()
+		get_tree().change_scene_to(win)
 
 
 func scale_ship() -> void:
@@ -46,5 +47,4 @@ func _on_Ship_room_update(rooms_filled, room_count):
 
 
 func _on_Ship_game_over():
-	set_physics_process(false)
-	$HUD.show_lose_screen()
+	get_tree().change_scene_to(loose)
