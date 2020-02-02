@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/character/body1-klettern_2.svg" type="Texture" id=1]
 [ext_resource path="res://assets/character/body1-walk_6.svg" type="Texture" id=2]
@@ -16,6 +16,16 @@
 [ext_resource path="res://assets/character/body1-walk_5.svg" type="Texture" id=14]
 [ext_resource path="res://assets/character/body1-klettern_0.svg" type="Texture" id=15]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=16]
+[ext_resource path="res://assets/character/body1-pumpen_1.svg" type="Texture" id=17]
+[ext_resource path="res://assets/character/body1-hammern_3.svg" type="Texture" id=18]
+[ext_resource path="res://assets/character/body1-pumpen_3.svg" type="Texture" id=19]
+[ext_resource path="res://assets/character/body1-hammern_1.svg" type="Texture" id=20]
+[ext_resource path="res://assets/character/body1-pumpen_4.svg" type="Texture" id=21]
+[ext_resource path="res://assets/character/body1-hammern_2.svg" type="Texture" id=22]
+[ext_resource path="res://assets/character/body1-pumpen_0.svg" type="Texture" id=23]
+[ext_resource path="res://assets/character/body1-pumpen_5.svg" type="Texture" id=24]
+[ext_resource path="res://assets/character/body1-pumpen_2.svg" type="Texture" id=25]
+[ext_resource path="res://assets/character/body1-hammern_0.svg" type="Texture" id=26]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -24,14 +34,24 @@ animations = [ {
 "name": "idle",
 "speed": 0.0
 }, {
+"frames": [ ExtResource( 26 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "repair",
+"speed": 15.0
+}, {
 "frames": [ ExtResource( 15 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "climb",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "walk",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 17 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "pump",
 "speed": 15.0
 } ]
 
@@ -46,10 +66,14 @@ script = ExtResource( 16 )
 __meta__ = {
 "_edit_group_": true
 }
+walk_speed = 200
+climb_speed = 200
+gravity = 500
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "idle"
+animation = "repair"
+frame = 1
 playing = true
 
 [node name="Shape" type="CollisionShape2D" parent="."]
