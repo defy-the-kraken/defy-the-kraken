@@ -56,3 +56,7 @@ position = Vector2( 0, -45 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pump/InteractionArea"]
 shape = SubResource( 3 )
+[connection signal="body_entered" from="Breach/InteractionArea" to="." method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="Breach/InteractionArea" to="." method="_on_InteractionArea_body_exited"]
+[connection signal="body_entered" from="Pump/InteractionArea" to="." method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="Pump/InteractionArea" to="." method="_on_InteractionArea_body_exited"]
