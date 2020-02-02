@@ -2,3 +2,4 @@ Defy[[:space:]]the[[:space:]]Kraken.x86_64 filter=lfs diff=lfs merge=lfs -text
 Defy[[:space:]]the[[:space:]]Kraken.zip filter=lfs diff=lfs merge=lfs -text
 Defy[[:space:]]the[[:space:]]Kraken.exe filter=lfs diff=lfs merge=lfs -text
 Defy[[:space:]]the[[:space:]]Kraken.pck filter=lfs diff=lfs merge=lfs -text
+WEB_Assembly filter=lfs diff=lfs merge=lfs -text
