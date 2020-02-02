@@ -12,7 +12,7 @@ export (float) var pump_duration = 1
 var input_device : int = 0
 var can_climb : bool = false
 var has_supplies : bool = false
-var avail_interact : Node2D = null
+var interaction_stack : Array = []
 var velocity : Vector2 = Vector2.ZERO
 var current_rooms : Array = []
 
@@ -37,9 +37,9 @@ func _input(event : InputEvent) -> void:
 		if state in [PUMPING, REPAIRING]:
 			return
 		if event.is_action_pressed("interact"):
-			print_debug("Interact pressed")
-			if avail_interact:
-				var action = avail_interact.interact(self)
+			#print_debug("Interact pressed")
+			if interaction_stack:
+				var action = interaction_stack[interaction_stack.size() - 1].interact(self)
 				start_action(action)
 		elif event.is_action_pressed("move_up") and can_climb:
 			change_state(CLIMB_UP)
@@ -103,13 +103,13 @@ func supply() -> void:
 	has_supplies = true
 
 func enable_interaction(interaction : Node2D):
-	avail_interact = interaction
-	print_debug("Interaction available: ", avail_interact.name)
+	interaction_stack.append(interaction)
+	#print_debug("Interaction available: ", interaction.name)
 
 func disable_interaction(interaction : Node2D):
-	if avail_interact == interaction:
-		print_debug("Interaction unavailable: ", avail_interact.name)
-		avail_interact = null
+	var idx = interaction_stack.find_last(interaction)
+	if idx != -1:
+		interaction_stack.remove(idx)
 
 func _physics_process(_delta : float) -> void:
 	match state:

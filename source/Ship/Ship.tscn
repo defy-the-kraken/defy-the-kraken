@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/ship/ship-body.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Ship.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Ship/Material_boxen.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Ship/Door.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Ship/Hatch.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 131, 64 )
@@ -106,8 +107,8 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
-min_breach_time = 3.0
-max_breach_time = 5.0
+min_breach_time = 1.0
+max_breach_time = 2.0
 
 [node name="BreachTimer" type="Timer" parent="."]
 process_mode = 0
@@ -120,6 +121,7 @@ __meta__ = {
 }
 
 [node name="Rooms" type="Node2D" parent="."]
+visible = false
 
 [node name="Room" parent="Rooms" instance=ExtResource( 3 )]
 position = Vector2( -533, -116 )
@@ -332,6 +334,9 @@ position = Vector2( 515, 96 )
 [node name="Door" parent="doors" instance=ExtResource( 7 )]
 position = Vector2( 333, 0 )
 
+[node name="Hatch" parent="doors" instance=ExtResource( 9 )]
+position = Vector2( 164, 63 )
+
 [node name="players" type="Node2D" parent="."]
 
 [node name="Player" parent="players" instance=ExtResource( 8 )]
@@ -341,6 +346,7 @@ scale = Vector2( 0.5, 0.5 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Driving"
 anims/Driving = SubResource( 18 )
+[connection signal="room_update" from="." to="." method="_on_Ship_room_update"]
 [connection signal="timeout" from="BreachTimer" to="." method="_on_BreachTimer_timeout"]
 
 [editable path="Rooms/Room"]

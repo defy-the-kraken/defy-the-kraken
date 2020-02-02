@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/ship/luke_open.png" type="Texture" id=1]
+[ext_resource path="res://Ship/Hatch.gd" type="Script" id=2]
+[ext_resource path="res://assets/ship/luke_closed.png" type="Texture" id=3]
+[ext_resource path="res://Menues/UI/InteractionHint.tscn" type="PackedScene" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 0.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 30, 17 )
+
+[node name="Hatch" type="AnimatedSprite"]
+frames = SubResource( 1 )
+centered = false
+script = ExtResource( 2 )
+
+[node name="Body" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 8
+
+[node name="Shape" type="CollisionShape2D" parent="Body"]
+position = Vector2( 31, 39 )
+shape = SubResource( 2 )
+
+[node name="InteractionHint" parent="." instance=ExtResource( 4 )]
+visible = false
+margin_left = -7.0
+margin_top = -29.0
+margin_right = 93.0
+margin_bottom = -1.0
+[connection signal="body_entered" from="Body" to="." method="_on_Body_body_entered"]
+[connection signal="body_exited" from="Body" to="." method="_on_Body_body_exited"]
