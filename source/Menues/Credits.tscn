@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/menu/menu_nur_schiff.png" type="Texture" id=1]
+[ext_resource path="res://assets/character/body1-walk_1.svg" type="Texture" id=2]
+[ext_resource path="res://assets/character/body1-draft.svg" type="Texture" id=3]
+[ext_resource path="res://Menues/Credits.gd" type="Script" id=4]
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.265625, 0.0684814, 0.230201, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Developed During Global Game Jam 2020
+
+Coding :
+Jan Forberger	| Frogbeerr
+Tim Nätebus	| Zitroanen
+
+Design:
+Janina				| Yani
+L3D
+
+Sounds:
+Tim Nätebus	| Zitroanen
+
+Administrated (GIT REPO):
+L3D
+
+Fonts:
+how-to-do-something 
+Copyright © 2012 TattooWoo.com. All Rights Reserved.
+from jonathan-s-harris
+
+License:
+defy-the-kraken game is licensed under a
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="Control" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="body1-draft" type="Sprite" parent="Container"]
+position = Vector2( 75, 0 )
+texture = ExtResource( 3 )
+
+[node name="Control" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="body1-walk_1" type="Sprite" parent="Control"]
+position = Vector2( -75, -75 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="menu_nur_schiff" type="Sprite" parent="Control"]
+position = Vector2( -49, 200 )
+texture = ExtResource( 1 )

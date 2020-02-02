@@ -1,9 +1,9 @@
 extends Sprite
 
-export var drainspeed : float = 10.2
-
-func interact(player):
-	get_parent().drain(drainspeed)
+func interact(_player):
+	if get_parent().get_waterlevel() == 0:
+		return ""
+	get_parent().drain(get_parent().drain_speed)
 	return "pump"
 
 
