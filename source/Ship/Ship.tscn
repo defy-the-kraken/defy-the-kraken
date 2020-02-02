@@ -6,7 +6,7 @@
 [ext_resource path="res://Ship/Wall.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Ship/Floor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Ship/Material_boxen.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Ship/Material_boxen_left.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 131, 64 )
@@ -80,7 +80,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.8, 1.5, 2.2, 2.9, 3.9, 4.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
@@ -101,8 +101,6 @@ tracks/1/keys = {
 }
 
 [node name="Ship" type="Node2D"]
-position = Vector2( 1.96751, 0.629603 )
-rotation = 0.00659319
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
@@ -119,14 +117,6 @@ texture = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="Material_boxen" parent="." instance=ExtResource( 6 )]
-position = Vector2( 583.339, 61.8008 )
-scale = Vector2( 0.4, 0.4 )
-
-[node name="Material_boxen2" parent="." instance=ExtResource( 7 )]
-position = Vector2( -608, 348 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Rooms" type="Node2D" parent="."]
 
@@ -233,6 +223,7 @@ position = Vector2( 183, 29 )
 shape = SubResource( 8 )
 
 [node name="walls" type="Node2D" parent="."]
+visible = false
 
 [node name="Wall" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( -766, -274 )
@@ -296,6 +287,7 @@ position = Vector2( -395, 132 )
 shape = SubResource( 16 )
 
 [node name="floors" type="Node2D" parent="."]
+visible = false
 
 [node name="Floor" parent="floors" instance=ExtResource( 5 )]
 position = Vector2( -17, 387 )
@@ -327,15 +319,25 @@ position = Vector2( -940, -187 )
 [node name="CollisionShape2D" parent="floors/Floor5" index="0"]
 shape = SubResource( 17 )
 
+[node name="Material_boxen2" parent="." instance=ExtResource( 6 )]
+
+[node name="supplies" type="Node2D" parent="."]
+
 [node name="doors" type="Node2D" parent="."]
 
 [node name="players" type="Node2D" parent="."]
 
+[node name="Player" parent="players" instance=ExtResource( 8 )]
+position = Vector2( 448, 25 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Driving"
 anims/Driving = SubResource( 18 )
+
+[node name="Material_boxen" parent="." instance=ExtResource( 6 )]
+position = Vector2( 578, 55 )
 [connection signal="timeout" from="BreachTimer" to="." method="_on_BreachTimer_timeout"]
-[connection signal="body_entered" from="Material_boxen" to="." method="_on_Material_boxen_body_entered"]
 
 [editable path="Rooms/Room"]
 
@@ -400,4 +402,3 @@ anims/Driving = SubResource( 18 )
 [editable path="floors/Floor4"]
 
 [editable path="floors/Floor5"]
-

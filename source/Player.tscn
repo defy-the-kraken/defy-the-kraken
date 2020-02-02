@@ -73,7 +73,6 @@ gravity = 500
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "repair"
-frame = 1
 playing = true
 
 [node name="Shape" type="CollisionShape2D" parent="."]
