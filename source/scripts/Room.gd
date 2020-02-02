@@ -55,7 +55,7 @@ func flood(amount : float) -> void:
 func drain(amount : float) -> void:
 	$Water.value -= amount
 
-func get_water_level() -> float:
+func get_waterlevel() -> float:
 	return $Water.value
 
 func _on_Room_body_entered(body : Player) -> void:

@@ -6,6 +6,9 @@ export (int) var walk_speed = 50
 export (int) var climb_speed = 30
 export (int) var gravity = 50
 
+export (float) var repair_duration = 2
+export (float) var pump_duration = 1
+
 var input_device : int = 0
 var can_climb : bool = false
 var has_supplies : bool = false
@@ -30,9 +33,14 @@ func _input(event : InputEvent) -> void:
 		return
 	# is it an activateion
 	if event.is_pressed():
+		# discard input if repairing or pumping
+		if state in [PUMPING, REPAIRING]:
+			return
 		if event.is_action_pressed("interact"):
-			if avail_interact and avail_interact.has_method("interact"):
-				avail_interact.interact()
+			print_debug("Interact pressed")
+			if avail_interact:
+				var action = avail_interact.interact(self)
+				start_action(action)
 		elif event.is_action_pressed("move_up") and can_climb:
 			change_state(CLIMB_UP)
 		elif event.is_action_pressed("move_down") and can_climb:
@@ -69,12 +77,10 @@ func change_state(new_state : int) -> void:
 			$Sprite.animation = "walk"
 			$Sprite.flip_h = true
 			$Sprite.playing = true
-			print_debug("State changed: Move left")
 		MOVE_RIGHT:
 			$Sprite.animation = "walk"
 			$Sprite.flip_h = false
 			$Sprite.playing = true
-			print_debug("State changed: Move right")
 		IDLE:
 			$Sprite.animation = "idle"
 		CLIMB_UP, CLIMB_DOWN:
@@ -83,6 +89,14 @@ func change_state(new_state : int) -> void:
 		CLIMB_IDLE:
 			$Sprite.animation = "climb"
 			$Sprite.playing = false
+		PUMPING:
+			$Sprite.animation = "pump"
+			$Sprite.playing = true
+			$InteractionTimer.start(pump_duration)
+		REPAIRING:
+			$Sprite.animation = "repair"
+			$Sprite.playing = true
+			$InteractionTimer.start(repair_duration)
 		
 
 func supply() -> void:
@@ -129,3 +143,16 @@ func get_slowdown() -> float:
 		max_water_level = max(room.get_waterlevel(), max_water_level)
 	var slowdown = (100 - max_water_level) / 100
 	return slowdown
+
+func start_action(action : String) -> void:
+	match action:
+		"pump":
+			change_state(PUMPING)
+		"breach":
+			change_state(REPAIRING)
+		_:
+			pass
+
+
+func _on_InteractionTimer_timeout():
+	change_state(IDLE)
