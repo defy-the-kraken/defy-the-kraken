@@ -75,7 +75,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 min_breach_time = 3.0
-max_breach_time = 20.0
+max_breach_time = 5.0
 
 [node name="BreachTimer" type="Timer" parent="."]
 process_mode = 0
