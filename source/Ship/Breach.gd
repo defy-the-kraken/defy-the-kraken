@@ -2,7 +2,7 @@ extends Sprite
 
 func interact(player):
 	if player.has_supplies:
-		get_parent().get_parent().repair()
+		get_parent().repair()
 		return "breach"
 	else:
 		return ""

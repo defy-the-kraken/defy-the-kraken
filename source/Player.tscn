@@ -37,7 +37,7 @@ animations = [ {
 "frames": [ ExtResource( 26 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "repair",
-"speed": 15.0
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 10 ) ],
 "loop": true,
@@ -72,9 +72,12 @@ gravity = 500
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "repair"
+animation = "idle"
 playing = true
 
 [node name="Shape" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 2 )
+
+[node name="InteractionTimer" type="Timer" parent="."]
+[connection signal="timeout" from="InteractionTimer" to="." method="_on_InteractionTimer_timeout"]
