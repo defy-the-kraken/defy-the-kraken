@@ -51,8 +51,8 @@ __meta__ = {
 texture = ExtResource( 2 )
 offset = Vector2( 0, -45 )
 
-[node name="Area2D" type="Area2D" parent="Pump"]
+[node name="InteractionArea" type="Area2D" parent="Pump"]
 position = Vector2( 0, -45 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pump/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pump/InteractionArea"]
 shape = SubResource( 3 )

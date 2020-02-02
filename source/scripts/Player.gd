@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var input_device : int = 0
 var can_climb : bool = false
+var has_material : bool = false
 var avail_interact = null
 
 enum {
@@ -11,22 +12,21 @@ enum {
 	CLIMB_UP, 
 	CLIMB_DOWN,
 	IDLE_CLIMB, 
-	PUMPING,
-	REPAIRING
+	PUMPING
 	}
 var state : int = IDLE
 
 func _input(event : InputEvent) -> void:
-	if not event.is_action_type() or state == REPAIRING:
+	if not event.is_action_type():
 		return
 	# is it an activateion
 	if event.is_pressed():
+		# Discard all inputs while pumping
+		if state == PUMPING:
+			return
 		if event.is_action_pressed("interact"):
-			match avail_action:
-				PUMP:
-					change_state(PUMPING)
-				REPAIR:
-					change_state(REPAIRING)
+			if avail_interact and avail_interact.has_method("interact"):
+				avail_interact.interact()
 		elif event.is_action_pressed("move_up") and can_climb:
 			change_state(CLIMB_UP)
 		elif event.is_action_pressed("move_down") and can_climb:
@@ -35,8 +35,6 @@ func _input(event : InputEvent) -> void:
 			change_state(MOVE_LEFT)
 		elif event.is_action_pressed("move_right"):
 			change_state(MOVE_RIGHT)
-		elif event.is_action_pressed("door") and can_door:
-			toggle_door()
 			
 	# or is it a deactivation
 	else:
@@ -53,16 +51,29 @@ func _input(event : InputEvent) -> void:
 			CLIMB_DOWN:
 				if event.is_action_released("move_down"):
 					change_state(IDLE_CLIMB)
+			PUMPING:
+				if event.is_action_released("interact"):
+					change_state(IDLE)
 			_: change_state(IDLE)
 
-func toggle_door() -> void:
-	pass
 
 func change_state(new_state : int) -> void:
 	# Check for actual state change
 	if new_state == state:
 		return
 	state = new_state
+
+func supply() -> void:
+	has_material = true
+
+
+func enable_interaction(interaction : Node2D):
+	avail_interact = interaction
+
+func disable_interaction(interaction : Node2D):
+	if avail_interact == interaction:
+		avail_interact = null
+
 
 """
 func _physics_process(delta : float) -> void:
