@@ -4,6 +4,7 @@ signal room_filled
 signal room_breached
 
 export (int) var flood_speed = 10
+export (int) var drain_speed = 20
 
 var room_size : Vector2
 var is_breached : bool = false

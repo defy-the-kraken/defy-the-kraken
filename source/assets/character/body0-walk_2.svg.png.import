@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/body1-walk_2.svg.png-c58feb40fded363600a1ee8f3ddff3f2.stex"
+path="res://.import/body0-walk_2.svg.png-b53a60bcf2b955dc3c1db809d4c42990.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/body1-walk_2.svg.png"
-dest_files=[ "res://.import/body1-walk_2.svg.png-c58feb40fded363600a1ee8f3ddff3f2.stex" ]
+source_file="res://assets/character/body0-walk_2.svg.png"
+dest_files=[ "res://.import/body0-walk_2.svg.png-b53a60bcf2b955dc3c1db809d4c42990.stex" ]
 
 [params]
 

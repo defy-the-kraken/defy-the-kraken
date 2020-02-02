@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/body1-pumpen_3.svg.png-76baa81bc37c0dce188595a5b13df313.stex"
+path="res://.import/body0-pumpen_3.svg.png-9d505da4704ba459052d619927fde0b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/body1-pumpen_3.svg.png"
-dest_files=[ "res://.import/body1-pumpen_3.svg.png-76baa81bc37c0dce188595a5b13df313.stex" ]
+source_file="res://assets/character/body0-pumpen_3.svg.png"
+dest_files=[ "res://.import/body0-pumpen_3.svg.png-9d505da4704ba459052d619927fde0b7.stex" ]
 
 [params]
 
