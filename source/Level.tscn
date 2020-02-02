@@ -1,16 +1,50 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Level.gd" type="Script" id=2]
 [ext_resource path="res://Ship/Ship.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/background/back_02.png" type="Texture" id=4]
+[ext_resource path="res://assets/background/front.png" type="Texture" id=5]
+[ext_resource path="res://assets/background/back_01.png" type="Texture" id=6]
 
 [node name="Level" type="Node"]
 script = ExtResource( 2 )
 length = 300.0
 speed = 5.0
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Ship" parent="." instance=ExtResource( 3 )]
 min_breach_time = 1.0
 max_breach_time = 2.0
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HUD" parent="." instance=ExtResource( 1 )]
