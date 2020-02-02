@@ -107,8 +107,8 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
-min_breach_time = 5.0
-max_breach_time = 15.0
+min_breach_time = 2.0
+max_breach_time = 5.0
 
 [node name="BreachTimer" type="Timer" parent="."]
 process_mode = 0
