@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wave.png-f1f0b8d72a38f0f98c93180ee0e24d08.stex"
+path="res://.import/ship-body3_background.svg-a9eb5dd03c00cad33ecffc1355ce0fe1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites-Bar/wave.png"
-dest_files=[ "res://.import/wave.png-f1f0b8d72a38f0f98c93180ee0e24d08.stex" ]
+source_file="res://assets/background/ship-body3_background.svg"
+dest_files=[ "res://.import/ship-body3_background.svg-a9eb5dd03c00cad33ecffc1355ce0fe1.stex" ]
 
 [params]
 

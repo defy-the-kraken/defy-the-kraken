@@ -27,6 +27,7 @@ func _physics_process(delta : float) -> void:
 	if progress >= length:
 		set_physics_process(false)
 		get_tree().change_scene_to(win)
+	print_debug(get_viewport().size)
 
 
 func scale_ship() -> void:

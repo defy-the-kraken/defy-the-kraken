@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wave.png-f1f0b8d72a38f0f98c93180ee0e24d08.stex"
+path="res://.import/body2-pumpen_0.svg-106dc6354e6e4f765923bcf1acc3729f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites-Bar/wave.png"
-dest_files=[ "res://.import/wave.png-f1f0b8d72a38f0f98c93180ee0e24d08.stex" ]
+source_file="res://assets/character/body2-pumpen_0.svg"
+dest_files=[ "res://.import/body2-pumpen_0.svg-106dc6354e6e4f765923bcf1acc3729f.stex" ]
 
 [params]
 
