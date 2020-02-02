@@ -24,7 +24,7 @@ func set_breach_timer() -> void:
 	$BreachTimer.start(time)
 
 func start() -> void:
-	set_breach_timer()
+	_on_BreachTimer_timeout()
 
 func _on_BreachTimer_timeout():
 	if rooms_not_breached:

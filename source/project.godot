@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Defy the Kraken"
+run/main_scene="res://Menues/start_menu.tscn"
 config/icon="res://icon.png"
 
 [input]

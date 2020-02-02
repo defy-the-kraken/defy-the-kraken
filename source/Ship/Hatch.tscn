@@ -22,11 +22,15 @@ frames = SubResource( 1 )
 centered = false
 script = ExtResource( 2 )
 
+[node name="Leiter" parent="." instance=ExtResource( 5 )]
+z_index = -1
+
 [node name="Body" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 8
 
 [node name="Shape" type="CollisionShape2D" parent="Body"]
+visible = false
 position = Vector2( 32, 37 )
 shape = SubResource( 2 )
 
@@ -36,7 +40,5 @@ margin_left = -7.0
 margin_top = -29.0
 margin_right = 93.0
 margin_bottom = -1.0
-
-[node name="Leiter" parent="." instance=ExtResource( 5 )]
 [connection signal="body_entered" from="Body" to="." method="_on_Body_body_entered"]
 [connection signal="body_exited" from="Body" to="." method="_on_Body_body_exited"]

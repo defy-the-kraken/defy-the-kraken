@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/character/body1-klettern_2.svg" type="Texture" id=1]
 [ext_resource path="res://assets/character/body1-walk_6.svg" type="Texture" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://assets/character/body1-pumpen_5.svg" type="Texture" id=24]
 [ext_resource path="res://assets/character/body1-pumpen_2.svg" type="Texture" id=25]
 [ext_resource path="res://assets/character/body1-hammern_0.svg" type="Texture" id=26]
+[ext_resource path="res://assets/ship/materialkiste.png" type="Texture" id=27]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -59,13 +60,9 @@ animations = [ {
 extents = Vector2( 68, 80 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 181, 147 )
 collision_layer = 8
 collision_mask = 3
 script = ExtResource( 16 )
-__meta__ = {
-"_edit_group_": true
-}
 walk_speed = 200
 climb_speed = 200
 gravity = 500
@@ -80,4 +77,16 @@ visible = false
 shape = SubResource( 2 )
 
 [node name="InteractionTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="SupplyMarker" type="TextureRect" parent="."]
+visible = false
+margin_left = -104.0
+margin_top = -108.0
+margin_right = -54.0
+margin_bottom = -58.0
+texture = ExtResource( 27 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="InteractionTimer" to="." method="_on_InteractionTimer_timeout"]

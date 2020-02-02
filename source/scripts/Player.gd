@@ -101,10 +101,13 @@ func change_state(new_state : int) -> void:
 			$Sprite.animation = "repair"
 			$Sprite.playing = true
 			$InteractionTimer.start(repair_duration)
+			has_supplies = false
+			$SupplyMarker.hide()
 		
 
 func supply() -> void:
 	has_supplies = true
+	$SupplyMarker.show()
 
 func enable_interaction(interaction : Node2D):
 	interaction_stack.append(interaction)
@@ -170,4 +173,9 @@ func _on_InteractionTimer_timeout():
 func stop_climb() -> void:
 	can_climb = false
 	can_pass_floor = false
-	change_state(IDLE)
+	if Input.is_action_pressed("move_left"):
+		change_state(MOVE_LEFT)
+	elif Input.is_action_pressed("move_right"):
+		change_state(MOVE_RIGHT)
+	else:
+		change_state(IDLE)

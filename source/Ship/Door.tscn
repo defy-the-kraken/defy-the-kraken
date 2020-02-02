@@ -26,6 +26,7 @@ collision_layer = 4
 collision_mask = 8
 
 [node name="Shape" type="CollisionShape2D" parent="Body"]
+visible = false
 position = Vector2( 43, 51 )
 shape = SubResource( 2 )
 

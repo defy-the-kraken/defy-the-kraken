@@ -52,7 +52,7 @@ extents = Vector2( 7, 322 )
 
 [sub_resource type="RectangleShape2D" id=12]
 resource_local_to_scene = true
-extents = Vector2( 7, 322 )
+extents = Vector2( 7, 422 )
 
 [sub_resource type="RectangleShape2D" id=13]
 resource_local_to_scene = true
@@ -115,6 +115,7 @@ process_mode = 0
 one_shot = true
 
 [node name="Sprite" type="Sprite" parent="."]
+z_index = -2
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
@@ -290,7 +291,7 @@ shape = SubResource( 16 )
 [node name="floors" type="Node2D" parent="."]
 
 [node name="Floor" parent="floors" instance=ExtResource( 5 )]
-position = Vector2( -17, 387 )
+position = Vector2( -26, 387 )
 
 [node name="CollisionShape2D" parent="floors/Floor" index="0"]
 shape = SubResource( 17 )
@@ -319,21 +320,81 @@ position = Vector2( -940, -187 )
 [node name="CollisionShape2D" parent="floors/Floor5" index="0"]
 shape = SubResource( 17 )
 
+[node name="Floor6" parent="floors" instance=ExtResource( 5 )]
+position = Vector2( 1016, -183 )
+
+[node name="CollisionShape2D" parent="floors/Floor6" index="0"]
+shape = SubResource( 17 )
+
 [node name="supplies" type="Node2D" parent="."]
 
 [node name="Material_boxen2" parent="supplies" instance=ExtResource( 6 )]
 position = Vector2( 0, -53 )
 
 [node name="Material_boxen" parent="supplies" instance=ExtResource( 6 )]
-position = Vector2( 515, 96 )
+position = Vector2( 197, 384 )
 
 [node name="doors" type="Node2D" parent="."]
 
 [node name="Door" parent="doors" instance=ExtResource( 7 )]
-position = Vector2( 333, 0 )
+position = Vector2( 333, -8 )
+
+[node name="Door10" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 433, -155 )
+
+[node name="Door2" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( -54, -10 )
+
+[node name="Door3" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( -438, -10 )
+
+[node name="Door12" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( -441, -155 )
+
+[node name="Door14" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( -606, -300 )
+
+[node name="Door13" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( -269, -155 )
+
+[node name="Door6" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 333, 134 )
+
+[node name="Door11" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 258, -152 )
+
+[node name="Door5" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( -54, 132 )
+
+[node name="Door4" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( -438, 132 )
+
+[node name="Door9" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 333, 279 )
+
+[node name="Door8" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( -54, 277 )
+
+[node name="Door7" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( -438, 277 )
 
 [node name="Hatch" parent="doors" instance=ExtResource( 9 )]
 position = Vector2( 164, 63 )
+
+[node name="Hatch2" parent="doors" instance=ExtResource( 9 )]
+position = Vector2( -254, 204 )
+
+[node name="Hatch6" parent="doors" instance=ExtResource( 9 )]
+position = Vector2( 481, 205 )
+
+[node name="Hatch3" parent="doors" instance=ExtResource( 9 )]
+position = Vector2( -571, -82 )
+
+[node name="Hatch4" parent="doors" instance=ExtResource( 9 )]
+position = Vector2( -523, -223 )
+
+[node name="Hatch5" parent="doors" instance=ExtResource( 9 )]
+position = Vector2( -201, -76 )
 
 [node name="players" type="Node2D" parent="."]
 
@@ -409,3 +470,5 @@ anims/Driving = SubResource( 18 )
 [editable path="floors/Floor4"]
 
 [editable path="floors/Floor5"]
+
+[editable path="floors/Floor6"]
