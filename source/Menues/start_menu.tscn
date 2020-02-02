@@ -154,7 +154,7 @@ margin_right = 434.0
 margin_bottom = 254.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Play Solo"
+text = "not implemented"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -207,7 +207,7 @@ margin_right = 580.0
 margin_bottom = 340.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Play Solo"
+text = "Preferences"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -260,7 +260,7 @@ margin_right = 726.0
 margin_bottom = 426.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Play Solo"
+text = "Credits"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -313,7 +313,7 @@ margin_right = 872.0
 margin_bottom = 512.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Play Solo"
+text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
 }

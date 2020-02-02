@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/body1-klettern_3.svg.png-2c3a08f0310b35e34df140cdeb98f831.stex"
+path="res://.import/body0-klettern_3.svg.png-caffa9d996f34ef5b07379100772f11d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/body1-klettern_3.svg.png"
-dest_files=[ "res://.import/body1-klettern_3.svg.png-2c3a08f0310b35e34df140cdeb98f831.stex" ]
+source_file="res://assets/character/body0-klettern_3.svg.png"
+dest_files=[ "res://.import/body0-klettern_3.svg.png-caffa9d996f34ef5b07379100772f11d.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/body1-hammern_2.svg-7c30a47a6b3586733265eaef57f089f4.stex"
+path="res://.import/body0-hammern_2.svg-5d2c5b73b562e8e8a7712fe98a91b153.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/body1-hammern_2.svg"
-dest_files=[ "res://.import/body1-hammern_2.svg-7c30a47a6b3586733265eaef57f089f4.stex" ]
+source_file="res://assets/character/body0-hammern_2.svg"
+dest_files=[ "res://.import/body0-hammern_2.svg-5d2c5b73b562e8e8a7712fe98a91b153.stex" ]
 
 [params]
 

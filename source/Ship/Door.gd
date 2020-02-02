@@ -2,7 +2,7 @@ extends AnimatedSprite
 
 enum {CLOSED, OPEN}
 
-func toggle() -> void:
+func interact(body : Player) -> void:
 	if frame == CLOSED:
 		open()
 	else:
@@ -10,8 +10,12 @@ func toggle() -> void:
 
 func open() -> void:
 	frame = OPEN
-	$Body/Shape.disabled = false
 
 func close() -> void:
 	frame = CLOSED
-	$Body/Shape.disabled = true
+
+func _on_Body_body_entered(body : Player) -> void:
+	body.enable_interaction(self)
+
+func _on_Body_body_exited(body : Player) -> void:
+	body.disable_interaction(self)

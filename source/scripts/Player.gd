@@ -111,7 +111,7 @@ func disable_interaction(interaction : Node2D):
 		print_debug("Interaction unavailable: ", avail_interact.name)
 		avail_interact = null
 
-func _physics_process(delta : float) -> void:
+func _physics_process(_delta : float) -> void:
 	match state:
 		MOVE_LEFT:
 			velocity = Vector2(-walk_speed, gravity)
