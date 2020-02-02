@@ -24,15 +24,15 @@ animations = [ {
 "name": "idle",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "climb",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "walk",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "climb",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
