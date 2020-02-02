@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/luke_closed.png-40b72c019e3bc38296d51f064b90f581.stex"
+path="res://.import/ship_body_railing.png-6592e1b8a3b371325505d28b3c233e2b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ship/luke_closed.png"
-dest_files=[ "res://.import/luke_closed.png-40b72c019e3bc38296d51f064b90f581.stex" ]
+source_file="res://assets/ship/ship_body_railing.png"
+dest_files=[ "res://.import/ship_body_railing.png-6592e1b8a3b371325505d28b3c233e2b.stex" ]
 
 [params]
 

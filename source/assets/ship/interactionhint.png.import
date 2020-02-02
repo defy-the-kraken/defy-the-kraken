@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/schlauchteil.png-c3349e7c65d2066273184b581bbefc8e.stex"
+path="res://.import/interactionhint.png-5701f6a535a64f42be7a944bb298fe97.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ship/schlauchteil.png"
-dest_files=[ "res://.import/schlauchteil.png-c3349e7c65d2066273184b581bbefc8e.stex" ]
+source_file="res://assets/ship/interactionhint.png"
+dest_files=[ "res://.import/interactionhint.png-5701f6a535a64f42be7a944bb298fe97.stex" ]
 
 [params]
 

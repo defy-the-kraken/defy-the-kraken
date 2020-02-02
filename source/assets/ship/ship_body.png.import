@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/luke_open.png-6cefc8a6a0d65fbff5fea74ae9693ff5.stex"
+path="res://.import/ship_body.png-257b49e8195da71000b70038bb212e1a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ship/luke_open.png"
-dest_files=[ "res://.import/luke_open.png-6cefc8a6a0d65fbff5fea74ae9693ff5.stex" ]
+source_file="res://assets/ship/ship_body.png"
+dest_files=[ "res://.import/ship_body.png-257b49e8195da71000b70038bb212e1a.stex" ]
 
 [params]
 
