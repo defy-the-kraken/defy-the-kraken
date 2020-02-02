@@ -37,14 +37,6 @@ func scale_ship() -> void:
 	var x_scale : float = target_size.x / is_size.x
 	var y_scale : float = target_size.y / is_size.y
 	x_scale = min(x_scale, y_scale)
-	
-	$TextureRect.rect_scale = Vector2(x_scale, y_scale)
-	$TextureRect.rect_size = Vector2(OS.window_size)
-	$TextureRect2.rect_scale = Vector2(x_scale, y_scale)
-	$TextureRect2.rect_size = Vector2(OS.window_size)
-	$TextureRect3.rect_scale = Vector2(x_scale, y_scale)
-	$TextureRect3.rect_size = Vector2(OS.window_size)
-
 	$Ship.scale = Vector2(x_scale, x_scale)
 	# Position the ship in the middle of the window
 	$Ship.position = get_viewport().size / 2 #+ Vector2(0, 66)
