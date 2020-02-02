@@ -1,6 +1,7 @@
 extends Area2D
 
 signal room_filled
+signal room_breached
 
 export (int) var flood_speed = 10
 
@@ -26,10 +27,14 @@ func _ready():
 func breach() -> void:
 	is_breached = true
 	$Breach.show()
+	$Breach/BreachArea/Shape.disabled = false
+	emit_signal("room_breached", self, true)
 
 func repair() -> void:
 	is_breached = false
 	$Breach.hide()
+	$Breach/BreachArea/Shape.disabled = true
+	emit_signal("room_breached", self, false)
 
 func _physics_process(delta) -> void:
 	if is_breached:
@@ -50,10 +55,11 @@ func flood(amount : float) -> void:
 func drain(amount : float) -> void:
 	$Water.value -= amount
 
+func get_water_level() -> float:
+	return $Water.value
 
-#func _on_InteractionArea_body_entered(body):
-#	body.enable_ineraction(self.get_parent())
-	
+func _on_Room_body_entered(body : Player) -> void:
+	body.enter_room(self)
 
-#func _on_InteractionArea_body_exited(body):
-#	body.disable_interaction(.get_parent())
+func _on_Room_body_exited(body : Player) -> void:
+	body.leave_room(self)
