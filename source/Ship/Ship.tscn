@@ -88,7 +88,6 @@ __meta__ = {
 }
 
 [node name="Rooms" type="Node2D" parent="."]
-visible = false
 
 [node name="Room" parent="Rooms" instance=ExtResource( 3 )]
 position = Vector2( -533, -116 )
@@ -290,7 +289,6 @@ shape = SubResource( 17 )
 [node name="doors" type="Node2D" parent="."]
 
 [node name="players" type="Node2D" parent="."]
-
 [connection signal="timeout" from="BreachTimer" to="." method="_on_BreachTimer_timeout"]
 
 [editable path="Rooms/Room"]
