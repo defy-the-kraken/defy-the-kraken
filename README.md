@@ -22,8 +22,8 @@ Hurry and you will arrvive at the shore savely.
 
  CONTROLS
 ------------
-A / SPACE : interacte
-arrow keys / cursor keys : move
+Joypad A / SPACE : interact
+Joypad Left Stick / WASD : move
 
  ENGINE
 -----------
