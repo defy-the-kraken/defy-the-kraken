@@ -22,8 +22,6 @@ self_modulate = Color( 1, 1, 1, 0 )
 collision_layer = 4
 collision_mask = 8
 script = ExtResource( 1 )
-flood_speed = 30
-drain_speed = 60
 
 [node name="Shape" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

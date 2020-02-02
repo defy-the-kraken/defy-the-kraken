@@ -107,8 +107,8 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
-min_breach_time = 1.0
-max_breach_time = 2.0
+min_breach_time = 5.0
+max_breach_time = 15.0
 
 [node name="BreachTimer" type="Timer" parent="."]
 process_mode = 0
@@ -121,7 +121,6 @@ __meta__ = {
 }
 
 [node name="Rooms" type="Node2D" parent="."]
-visible = false
 
 [node name="Room" parent="Rooms" instance=ExtResource( 3 )]
 position = Vector2( -533, -116 )
@@ -226,7 +225,6 @@ position = Vector2( 183, 29 )
 shape = SubResource( 8 )
 
 [node name="walls" type="Node2D" parent="."]
-visible = false
 
 [node name="Wall" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( -766, -274 )
@@ -346,7 +344,6 @@ scale = Vector2( 0.5, 0.5 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Driving"
 anims/Driving = SubResource( 18 )
-[connection signal="room_update" from="." to="." method="_on_Ship_room_update"]
 [connection signal="timeout" from="BreachTimer" to="." method="_on_BreachTimer_timeout"]
 
 [editable path="Rooms/Room"]

@@ -15,7 +15,7 @@ func _ready() -> void:
 	rng = RandomNumberGenerator.new()
 	rng.randomize()
 	for room in $Rooms.get_children():
-		room.connect("room_filled", self, "on_room_filled")
+		room.connect("room_filled", self, "_on_Ship_room_update")
 		room.connect("room_breached", self, "on_room_breached")
 		rooms_not_breached.append(room)
 

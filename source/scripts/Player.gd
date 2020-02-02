@@ -11,6 +11,7 @@ export (float) var pump_duration = 1
 
 var input_device : int = 0
 var can_climb : bool = false
+var can_pass_floor : bool = false
 var has_supplies : bool = false
 var interaction_stack : Array = []
 var velocity : Vector2 = Vector2.ZERO
@@ -72,6 +73,7 @@ func change_state(new_state : int) -> void:
 	# save the state
 	state = new_state
 	# Switch animation
+	set_collision_mask_bit(1, true)
 	match state:
 		MOVE_LEFT:
 			$Sprite.animation = "walk"
@@ -86,9 +88,11 @@ func change_state(new_state : int) -> void:
 		CLIMB_UP, CLIMB_DOWN:
 			$Sprite.animation = "climb"
 			$Sprite.playing = true
+			set_collision_mask_bit(1, !can_pass_floor)
 		CLIMB_IDLE:
 			$Sprite.animation = "climb"
 			$Sprite.playing = false
+			set_collision_mask_bit(1, !can_pass_floor)
 		PUMPING:
 			$Sprite.animation = "pump"
 			$Sprite.playing = true
@@ -115,14 +119,19 @@ func _physics_process(_delta : float) -> void:
 	match state:
 		MOVE_LEFT:
 			velocity = Vector2(-walk_speed, gravity)
+			set_collision_mask_bit(1, true)
 		MOVE_RIGHT:
 			velocity = Vector2(walk_speed, gravity)
+			set_collision_mask_bit(1, true)
 		IDLE:
 			velocity = Vector2(0, gravity)
+			set_collision_mask_bit(1, true)
 		CLIMB_UP:
 			velocity = Vector2(0, -climb_speed)
+			set_collision_mask_bit(1, !can_pass_floor)
 		CLIMB_DOWN:
 			velocity = Vector2(0, climb_speed)
+			set_collision_mask_bit(1, !can_pass_floor)
 		_: velocity = Vector2.ZERO
 	velocity *= get_slowdown()
 	move_and_slide(velocity)
@@ -142,6 +151,7 @@ func get_slowdown() -> float:
 	for room in current_rooms:
 		max_water_level = max(room.get_waterlevel(), max_water_level)
 	var slowdown = (100 - max_water_level) / 100
+	slowdown = slowdown /2 + .5
 	return slowdown
 
 func start_action(action : String) -> void:
@@ -155,4 +165,9 @@ func start_action(action : String) -> void:
 
 
 func _on_InteractionTimer_timeout():
+	change_state(IDLE)
+
+func stop_climb() -> void:
+	can_climb = false
+	can_pass_floor = false
 	change_state(IDLE)
