@@ -22,7 +22,7 @@ tracks/0/keys = {
 [node name="InteractionHint" type="TextureRect"]
 grow_horizontal = 2
 grow_vertical = 2
-rect_scale = Vector2( 0.936455, 0.936455 )
+rect_scale = Vector2( 0.902564, 0.902564 )
 rect_pivot_offset = Vector2( 50, 14 )
 texture = ExtResource( 1 )
 stretch_mode = 4
