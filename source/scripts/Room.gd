@@ -49,3 +49,11 @@ func flood(amount : float) -> void:
 
 func drain(amount : float) -> void:
 	$Water.value -= amount
+
+
+func _on_InteractionArea_body_entered(body):
+	body.enable_ineraction(self.get_parent())
+	
+
+func _on_InteractionArea_body_exited(body):
+	body.disable_interaction(.get_parent())
