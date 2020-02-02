@@ -15,9 +15,15 @@ The Global Game Jam is a 48Hour Game Jam where the World
 Create Games for the World. 
 
 
- Gameidea
+ GAME IDEA
 ------------
-We made some thoughts about the game idea in [GAMEJAM.md](other/GAMEJAM.md).
+Your ship is under attack by a wild seamonster. You have to prevent the ship from sinking. Repair the holes and pump the water out!
+Hurry and you will arrvive at the shore savely. 
+
+ CONTROLS
+------------
+A / SPACE : interacte
+arrow keys / cursor keys : move
 
  ENGINE
 -----------
