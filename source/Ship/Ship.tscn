@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/ship/ship-body.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Ship.gd" type="Script" id=2]
@@ -71,7 +71,38 @@ extents = Vector2( 7, 322 )
 resource_local_to_scene = true
 extents = Vector2( 725, 7 )
 
+[sub_resource type="Animation" id=18]
+resource_name = "Driving"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1.5, 2.2, 2.9, 3.9, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 25, 8 ), Vector2( 23, -5 ), Vector2( 30, -10 ), Vector2( 12, -5 ), Vector2( -26, -10 ), Vector2( -20, -5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1.4, 2.2, 3.4, 4.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 3.0, 0.0, -3.0, 4.0, -3.0 ]
+}
+
 [node name="Ship" type="Node2D"]
+position = Vector2( 1.96751, 0.629603 )
+rotation = 0.00659319
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
@@ -299,6 +330,10 @@ shape = SubResource( 17 )
 [node name="doors" type="Node2D" parent="."]
 
 [node name="players" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Driving"
+anims/Driving = SubResource( 18 )
 [connection signal="timeout" from="BreachTimer" to="." method="_on_BreachTimer_timeout"]
 [connection signal="body_entered" from="Material_boxen" to="." method="_on_Material_boxen_body_entered"]
 

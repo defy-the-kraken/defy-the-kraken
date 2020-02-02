@@ -18,15 +18,12 @@ func _ready() -> void:
 		room.connect("room_filled", self, "on_room_filled")
 		rooms_not_breached.append(room)
 
-
 func set_breach_timer() -> void:
 	var time : float = rng.randf_range(min_breach_time, max_breach_time)
 	$BreachTimer.start(time)
 
-
 func start() -> void:
 	set_breach_timer()
-
 
 func on_room_filled(room, is_filled) -> void:
 	if is_filled:
@@ -39,7 +36,6 @@ func on_room_filled(room, is_filled) -> void:
 	# Check if all rooms are filled
 	if rooms_filled.size() == $Rooms.get_child_count():
 		emit_signal("game_over")
-
 
 func _on_BreachTimer_timeout():
 	var room_idx : int = rng.randi_range(0, rooms_not_breached.size() - 1)
