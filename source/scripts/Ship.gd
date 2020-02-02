@@ -16,6 +16,7 @@ func _ready() -> void:
 	rng.randomize()
 	for room in $Rooms.get_children():
 		room.connect("room_filled", self, "on_room_filled")
+		room.connect("room_breached", self, "on_room_breached")
 		rooms_not_breached.append(room)
 
 func set_breach_timer() -> void:
@@ -38,10 +39,17 @@ func on_room_filled(room, is_filled) -> void:
 		emit_signal("game_over")
 
 func _on_BreachTimer_timeout():
-	var room_idx : int = rng.randi_range(0, rooms_not_breached.size() - 1)
-	var room = rooms_not_breached[room_idx]
-	room.breach()
-	rooms_not_breached.remove(room_idx)
-	# If there are rooms left, restart the timer
 	if rooms_not_breached:
-		set_breach_timer()
+		var room_idx : int = rng.randi_range(0, rooms_not_breached.size() - 1)
+		var room = rooms_not_breached[room_idx]
+		room.breach()
+	set_breach_timer()
+
+func on_room_breached(room, is_breached) -> void:
+	var idx : int = rooms_not_breached.find(room)
+	if is_breached:
+		if idx > -1:
+			rooms_not_breached.remove(idx)
+	else:
+		if idx == -1:
+			rooms_not_breached.append(room)

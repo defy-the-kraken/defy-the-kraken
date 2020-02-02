@@ -10,5 +10,7 @@ length = 300.0
 speed = 5.0
 
 [node name="Ship" parent="." instance=ExtResource( 3 )]
+min_breach_time = 1.0
+max_breach_time = 2.0
 
 [node name="HUD" parent="." instance=ExtResource( 1 )]

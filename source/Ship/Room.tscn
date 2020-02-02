@@ -30,12 +30,15 @@ shape = SubResource( 1 )
 visible = false
 scale = Vector2( 0.5, 1 )
 texture = ExtResource( 4 )
-
-[node name="InteractionArea" type="Area2D" parent="Breach"]
 script = ExtResource( 5 )
 
-[node name="Shape" type="CollisionShape2D" parent="Breach/InteractionArea"]
+[node name="BreachArea" type="Area2D" parent="Breach"]
+collision_layer = 4
+collision_mask = 8
+
+[node name="Shape" type="CollisionShape2D" parent="Breach/BreachArea"]
 shape = SubResource( 2 )
+disabled = true
 
 [node name="Water" type="TextureProgress" parent="."]
 visible = false
@@ -53,14 +56,18 @@ __meta__ = {
 [node name="Pump" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 offset = Vector2( 0, -45 )
-
-[node name="InteractionArea" type="Area2D" parent="Pump"]
-position = Vector2( 0, -45 )
 script = ExtResource( 6 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pump/InteractionArea"]
+[node name="PumpArea" type="Area2D" parent="Pump"]
+position = Vector2( 0, -45 )
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pump/PumpArea"]
 shape = SubResource( 3 )
-[connection signal="body_entered" from="Breach/InteractionArea" to="Breach/InteractionArea" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="Breach/InteractionArea" to="Breach/InteractionArea" method="_on_InteractionArea_body_exited"]
-[connection signal="body_entered" from="Pump/InteractionArea" to="." method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="Pump/InteractionArea" to="." method="_on_InteractionArea_body_exited"]
+[connection signal="body_entered" from="." to="." method="_on_Room_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Room_body_exited"]
+[connection signal="body_entered" from="Breach/BreachArea" to="Breach" method="_on_BreachArea_body_entered"]
+[connection signal="body_exited" from="Breach/BreachArea" to="Breach" method="_on_BreachArea_body_exited"]
+[connection signal="body_entered" from="Pump/PumpArea" to="Pump" method="_on_PumpArea_body_entered"]
+[connection signal="body_exited" from="Pump/PumpArea" to="Pump" method="_on_PumpArea_body_exited"]
