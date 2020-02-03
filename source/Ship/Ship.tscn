@@ -331,8 +331,11 @@ shape = SubResource( 17 )
 [node name="Material_boxen2" parent="supplies" instance=ExtResource( 6 )]
 position = Vector2( 0, -53 )
 
+[node name="Material_boxen3" parent="supplies" instance=ExtResource( 6 )]
+position = Vector2( 502, 240 )
+
 [node name="Material_boxen" parent="supplies" instance=ExtResource( 6 )]
-position = Vector2( 197, 384 )
+position = Vector2( -536, 383 )
 
 [node name="doors" type="Node2D" parent="."]
 
@@ -379,22 +382,25 @@ position = Vector2( -54, 277 )
 position = Vector2( -438, 277 )
 
 [node name="Hatch" parent="doors" instance=ExtResource( 9 )]
-position = Vector2( 164, 63 )
+position = Vector2( 154, 62 )
 
 [node name="Hatch2" parent="doors" instance=ExtResource( 9 )]
-position = Vector2( -254, 204 )
+position = Vector2( -505, 62 )
+
+[node name="Hatch7" parent="doors" instance=ExtResource( 9 )]
+position = Vector2( -505, 205 )
 
 [node name="Hatch6" parent="doors" instance=ExtResource( 9 )]
-position = Vector2( 481, 205 )
+position = Vector2( 154, 204 )
 
 [node name="Hatch3" parent="doors" instance=ExtResource( 9 )]
-position = Vector2( -571, -82 )
+position = Vector2( -504, -86 )
 
 [node name="Hatch4" parent="doors" instance=ExtResource( 9 )]
-position = Vector2( -523, -223 )
+position = Vector2( -504, -223 )
 
 [node name="Hatch5" parent="doors" instance=ExtResource( 9 )]
-position = Vector2( -201, -76 )
+position = Vector2( 153, -85 )
 
 [node name="players" type="Node2D" parent="."]
 
@@ -472,3 +478,5 @@ anims/Driving = SubResource( 18 )
 [editable path="floors/Floor5"]
 
 [editable path="floors/Floor6"]
+
+[editable path="doors/Hatch5"]

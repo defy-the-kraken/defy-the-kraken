@@ -7,9 +7,10 @@
 [node name="Level" type="Node"]
 script = ExtResource( 2 )
 length = 200.0
-speed = 1.0
 
 [node name="Ship" parent="." instance=ExtResource( 3 )]
+min_breach_time = 5.0
+max_breach_time = 15.0
 
 [node name="HUD" parent="." instance=ExtResource( 1 )]
 [connection signal="game_over" from="Ship" to="." method="_on_Ship_game_over"]
