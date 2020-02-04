@@ -15,7 +15,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 30, 13 )
+extents = Vector2( 30, 24 )
 
 [node name="Hatch" type="AnimatedSprite"]
 frames = SubResource( 1 )
@@ -30,7 +30,6 @@ collision_layer = 4
 collision_mask = 8
 
 [node name="Shape" type="CollisionShape2D" parent="Body"]
-visible = false
 position = Vector2( 32, 37 )
 shape = SubResource( 2 )
 

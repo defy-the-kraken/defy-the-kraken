@@ -10,7 +10,7 @@ export (float) var repair_duration = 2
 export (float) var pump_duration = 1
 
 var input_device : int = 0
-var can_climb : bool = false
+var ladder_stack : Array = []
 var can_pass_floor : bool = false
 var has_supplies : bool = false
 var interaction_stack : Array = []
@@ -42,9 +42,9 @@ func _input(event : InputEvent) -> void:
 			if interaction_stack:
 				var action = interaction_stack[interaction_stack.size() - 1].interact(self)
 				start_action(action)
-		elif event.is_action_pressed("move_up") and can_climb:
+		elif event.is_action_pressed("move_up") and ladder_stack:
 			change_state(CLIMB_UP)
-		elif event.is_action_pressed("move_down") and can_climb:
+		elif event.is_action_pressed("move_down") and ladder_stack:
 			change_state(CLIMB_DOWN)
 		elif event.is_action_pressed("move_left"):
 			change_state(MOVE_LEFT)
@@ -170,12 +170,18 @@ func start_action(action : String) -> void:
 func _on_InteractionTimer_timeout():
 	change_state(IDLE)
 
-func stop_climb() -> void:
-	can_climb = false
-	can_pass_floor = false
-	if Input.is_action_pressed("move_left"):
-		change_state(MOVE_LEFT)
-	elif Input.is_action_pressed("move_right"):
-		change_state(MOVE_RIGHT)
-	else:
-		change_state(IDLE)
+func enable_climb(ladder) -> void:
+	if ladder_stack.find(ladder) == -1:
+		ladder_stack.append(ladder)
+
+func disable_climb(ladder) -> void:
+	var idx = ladder_stack.find_last(ladder)
+	if idx != -1:
+		ladder_stack.remove(idx)
+	if not ladder_stack:
+		if Input.is_action_pressed("move_left"):
+			change_state(MOVE_LEFT)
+		elif Input.is_action_pressed("move_right"):
+			change_state(MOVE_RIGHT)
+		else:
+			change_state(IDLE)
