@@ -14,6 +14,12 @@ and [Haite](https://www.haite.de/) for the Sponsored food.
 The Global Game Jam is a 48Hour Game Jam where the World
 Create Games for the World. 
 
+ After The GGJ2020
+--------------------
+Its not 100% Safe but Two of us wanna get things completly done,
+we will patch that game up with the diversifier : And now The Weather
+and add the Sounds that we Created. And maybe we get it done that red / green blindness 
+
 
  GAME IDEA
 ------------
