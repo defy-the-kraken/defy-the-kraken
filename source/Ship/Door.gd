@@ -2,7 +2,7 @@ extends AnimatedSprite
 
 enum {CLOSED, OPEN}
 
-export (float) var water_throughput = 25
+export (float) var water_throughput = 50
 export (float) var water_throughput_closed = 0
 
 func interact(body : Player) -> String:

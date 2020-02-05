@@ -14,7 +14,7 @@ func get_adjacent_rooms() -> void:
 	if $Right.is_colliding():
 		if $Right.get_collider() is Room:
 			room_right = $Right.get_collider()
-	print_debug(room_left, room_right)
+	print_debug(get_parent().name, " ", room_left, " ",  room_right)
 
 func _physics_process(delta : float) -> void:
 	if not room_left and not room_right:

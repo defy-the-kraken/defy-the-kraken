@@ -226,7 +226,6 @@ position = Vector2( 183, 29 )
 shape = SubResource( 8 )
 
 [node name="walls" type="Node2D" parent="."]
-visible = false
 
 [node name="Wall" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( -766, -274 )
@@ -390,13 +389,13 @@ position = Vector2( 154, 62 )
 position = Vector2( -505, 62 )
 
 [node name="Hatch7" parent="doors" instance=ExtResource( 9 )]
-position = Vector2( -505, 205 )
+position = Vector2( -505, 203 )
 
 [node name="Hatch6" parent="doors" instance=ExtResource( 9 )]
 position = Vector2( 154, 204 )
 
 [node name="Hatch3" parent="doors" instance=ExtResource( 9 )]
-position = Vector2( -504, -86 )
+position = Vector2( -504, -84 )
 
 [node name="Hatch4" parent="doors" instance=ExtResource( 9 )]
 position = Vector2( -504, -223 )
@@ -407,7 +406,7 @@ position = Vector2( 153, -85 )
 [node name="players" type="Node2D" parent="."]
 
 [node name="Player" parent="players" instance=ExtResource( 8 )]
-position = Vector2( 448, 25 )
+position = Vector2( 430, 33 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -480,5 +479,7 @@ anims/Driving = SubResource( 18 )
 [editable path="floors/Floor5"]
 
 [editable path="floors/Floor6"]
+
+[editable path="doors/Hatch3"]
 
 [editable path="doors/Hatch5"]
