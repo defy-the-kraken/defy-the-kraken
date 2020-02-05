@@ -19,6 +19,7 @@ var ladder_stack : Array = []
 var can_pass_floor : bool = false
 var has_supplies : bool = false
 var interaction_stack : Array = []
+var current_interaction
 var velocity : Vector2 = Vector2.ZERO
 var current_rooms : Array = []
 
@@ -45,7 +46,8 @@ func _input(event : InputEvent) -> void:
 		if event.is_action_pressed("interact"):
 			#print_debug("Interact pressed")
 			if interaction_stack:
-				var action = interaction_stack[interaction_stack.size() - 1].interact(self)
+				current_interaction = interaction_stack[interaction_stack.size() - 1]
+				var action = current_interaction.interact(self)
 				start_action(action)
 		elif event.is_action_pressed("move_up") and ladder_stack:
 			change_state(CLIMB_UP)
@@ -183,7 +185,7 @@ func is_drowning() -> bool:
 
 func _on_InteractionTimer_timeout() -> void:
 	change_state(IDLE)
-	interaction_stack[interaction_stack.size() - 1].stop_interaction()
+	current_interaction.stop_interaction()
 
 func enable_climb(ladder) -> void:
 	if ladder_stack.find(ladder) == -1:
