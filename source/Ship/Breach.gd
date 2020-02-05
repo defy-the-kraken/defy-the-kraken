@@ -7,6 +7,8 @@ func interact(player):
 	else:
 		return ""
 
+func stop_interaction() -> void:
+	pass
 
 func _on_BreachArea_body_entered(body : Player) -> void:
 	body.enable_interaction(self)

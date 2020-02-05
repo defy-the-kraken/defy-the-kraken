@@ -1,5 +1,7 @@
 extends Area2D
 
+class_name Room
+
 signal room_filled
 signal room_breached
 

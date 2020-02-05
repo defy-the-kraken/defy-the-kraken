@@ -226,6 +226,7 @@ position = Vector2( 183, 29 )
 shape = SubResource( 8 )
 
 [node name="walls" type="Node2D" parent="."]
+visible = false
 
 [node name="Wall" parent="walls" instance=ExtResource( 4 )]
 position = Vector2( -766, -274 )
@@ -289,6 +290,7 @@ position = Vector2( -395, 132 )
 shape = SubResource( 16 )
 
 [node name="floors" type="Node2D" parent="."]
+visible = false
 
 [node name="Floor" parent="floors" instance=ExtResource( 5 )]
 position = Vector2( -26, 387 )

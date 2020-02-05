@@ -2,6 +2,9 @@ extends AnimatedSprite
 
 enum {CLOSED, OPEN}
 
+export (float) var water_throughput = 25
+export (float) var water_throughput_closed = 0
+
 func interact(body : Player) -> String:
 	if frame == CLOSED:
 		open()
@@ -29,3 +32,8 @@ func _on_Body_body_exited(body : Player) -> void:
 	body.disable_interaction(self)
 	$InteractionHint.hide()
 	body.set_collision_mask_bit(0, true)
+
+func is_open() -> bool:
+	if frame == CLOSED:
+		return false
+	return true

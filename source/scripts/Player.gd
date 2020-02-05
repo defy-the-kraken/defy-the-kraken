@@ -1,13 +1,18 @@
 extends KinematicBody2D
 
+signal game_over
+
 class_name Player
 
 export (int) var walk_speed = 50
 export (int) var climb_speed = 30
+export (float) var drown_time = 4.0
 export (int) var gravity = 50
 
 export (float) var repair_duration = 2
 export (float) var pump_duration = 1
+
+
 
 var input_device : int = 0
 var ladder_stack : Array = []
@@ -118,7 +123,7 @@ func disable_interaction(interaction : Node2D):
 	if idx != -1:
 		interaction_stack.remove(idx)
 
-func _physics_process(_delta : float) -> void:
+func _physics_process(delta : float) -> void:
 	match state:
 		MOVE_LEFT:
 			velocity = Vector2(-walk_speed, gravity)
@@ -138,6 +143,10 @@ func _physics_process(_delta : float) -> void:
 		_: velocity = Vector2.ZERO
 	velocity *= get_slowdown()
 	move_and_slide(velocity)
+	if is_drowning():
+		$DrowningBar.value += 100 / drown_time * delta
+	else:
+		$DrowningBar.value -= 100 / drown_time * delta * 8
 
 func enter_room(room) -> void:
 	var idx = current_rooms.find(room)
@@ -166,9 +175,15 @@ func start_action(action : String) -> void:
 		_:
 			pass
 
+func is_drowning() -> bool:
+	for room in current_rooms:
+		if room.get_waterlevel() > 99:
+			return true
+	return false
 
-func _on_InteractionTimer_timeout():
+func _on_InteractionTimer_timeout() -> void:
 	change_state(IDLE)
+	interaction_stack[interaction_stack.size() - 1].stop_interaction()
 
 func enable_climb(ladder) -> void:
 	if ladder_stack.find(ladder) == -1:
@@ -185,3 +200,8 @@ func disable_climb(ladder) -> void:
 			change_state(MOVE_RIGHT)
 		else:
 			change_state(IDLE)
+
+
+func _on_DrowningBar_value_changed(value):
+	if value == 100:
+		emit_signal("game_over")

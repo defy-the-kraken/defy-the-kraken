@@ -1,11 +1,19 @@
 extends Sprite
 
+var is_pumping = false
+
 func interact(_player):
 	if get_parent().get_waterlevel() == 0:
 		return ""
-	get_parent().drain(get_parent().drain_speed)
+	is_pumping = true
 	return "pump"
+	
+func stop_interaction() -> void:
+	is_pumping = false
 
+func _physics_process(delta : float) -> void:
+	if is_pumping:
+		get_parent().drain(get_parent().drain_speed * delta)
 
 func _on_PumpArea_body_entered(body : Player) -> void:
 	body.enable_interaction(self)

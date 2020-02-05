@@ -18,6 +18,8 @@ func _ready() -> void:
 		room.connect("room_filled", self, "_on_Ship_room_update")
 		room.connect("room_breached", self, "on_room_breached")
 		rooms_not_breached.append(room)
+	for player in $players.get_children():
+		player.connect("game_over", self, "on_player_game_over")
 
 func set_breach_timer() -> void:
 	var time : float = rng.randf_range(min_breach_time, max_breach_time)
@@ -54,3 +56,6 @@ func _on_Ship_room_update(room, is_filled) -> void:
 	# Check if all rooms are filled
 	if rooms_filled.size() == $Rooms.get_child_count():
 		emit_signal("game_over")
+
+func on_player_game_over() -> void:
+	emit_signal("game_over")
